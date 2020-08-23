@@ -1,0 +1,2086 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8ED89772-5F80-4E53-ABAB-5246CC9E3BD5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedicineManagementSystem</RootNamespace>
+    <AssemblyName>MedicineManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44364</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutus.aspx" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminMedicalstoreList.aspx" />
+    <Content Include="AdminMedicalStoreManagement.aspx" />
+    <Content Include="AdminUserList.aspx" />
+    <Content Include="AdminMemberManagement.aspx" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\default.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\jquery.dataTables.min.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fa-brands-400.html" />
+    <Content Include="assets\fonts\fa-light-300.html" />
+    <Content Include="assets\fonts\fa-regular-400.html" />
+    <Content Include="assets\fonts\fa-solid-900.html" />
+    <Content Include="assets\images\doc.png" />
+    <Content Include="assets\images\doc2.png" />
+    <Content Include="assets\images\email.svg" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\hero-bg.jpg" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\overview-1.png" />
+    <Content Include="assets\images\overview-2.png" />
+    <Content Include="assets\images\page-bg-2.jpg" />
+    <Content Include="assets\images\page-bg-3.jpg" />
+    <Content Include="assets\images\page-bg-4.jpg" />
+    <Content Include="assets\images\page-bg-5.jpg" />
+    <Content Include="assets\images\page-bg-6.jpg" />
+    <Content Include="assets\images\page-bg.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\isotope.pkgd.min.js" />
+    <Content Include="assets\js\jquery.appear.min.js" />
+    <Content Include="assets\js\jquery.dataTables.min.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\vendor\modernizr-3.6.0.min.js" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
+    <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\footerstyle.css" />
+    <Content Include="datatables\css\jquery.dataTables.min.css" />
+    <Content Include="datatables\js\dataTables.semanticui.min.js" />
+    <Content Include="datatables\js\jquery-3.5.1.js" />
+    <Content Include="datatables\js\jquery.dataTables.min.js" />
+    <Content Include="datatables\js\semantic.min.js" />
+    <Content Include="footawesome\css\all.css" />
+    <Content Include="footawesome\css\all.min.css" />
+    <Content Include="footawesome\css\brands.css" />
+    <Content Include="footawesome\css\brands.min.css" />
+    <Content Include="footawesome\css\fontawesome.css" />
+    <Content Include="footawesome\css\fontawesome.min.css" />
+    <Content Include="footawesome\css\regular.css" />
+    <Content Include="footawesome\css\regular.min.css" />
+    <Content Include="footawesome\css\solid.css" />
+    <Content Include="footawesome\css\solid.min.css" />
+    <Content Include="footawesome\css\svg-with-js.css" />
+    <Content Include="footawesome\css\svg-with-js.min.css" />
+    <Content Include="footawesome\css\v4-shims.css" />
+    <Content Include="footawesome\css\v4-shims.min.css" />
+    <Content Include="footawesome\js\all.js" />
+    <Content Include="footawesome\js\all.min.js" />
+    <Content Include="footawesome\js\brands.js" />
+    <Content Include="footawesome\js\brands.min.js" />
+    <Content Include="footawesome\js\conflict-detection.js" />
+    <Content Include="footawesome\js\conflict-detection.min.js" />
+    <Content Include="footawesome\js\fontawesome.js" />
+    <Content Include="footawesome\js\fontawesome.min.js" />
+    <Content Include="footawesome\js\regular.js" />
+    <Content Include="footawesome\js\regular.min.js" />
+    <Content Include="footawesome\js\solid.js" />
+    <Content Include="footawesome\js\solid.min.js" />
+    <Content Include="footawesome\js\v4-shims.js" />
+    <Content Include="footawesome\js\v4-shims.min.js" />
+    <Content Include="footawesome\LICENSE.txt" />
+    <Content Include="footawesome\sprites\brands.svg" />
+    <Content Include="footawesome\sprites\regular.svg" />
+    <Content Include="footawesome\sprites\solid.svg" />
+    <Content Include="footawesome\svgs\brands\500px.svg" />
+    <Content Include="footawesome\svgs\brands\accessible-icon.svg" />
+    <Content Include="footawesome\svgs\brands\accusoft.svg" />
+    <Content Include="footawesome\svgs\brands\acquisitions-incorporated.svg" />
+    <Content Include="footawesome\svgs\brands\adn.svg" />
+    <Content Include="footawesome\svgs\brands\adobe.svg" />
+    <Content Include="footawesome\svgs\brands\adversal.svg" />
+    <Content Include="footawesome\svgs\brands\affiliatetheme.svg" />
+    <Content Include="footawesome\svgs\brands\airbnb.svg" />
+    <Content Include="footawesome\svgs\brands\algolia.svg" />
+    <Content Include="footawesome\svgs\brands\alipay.svg" />
+    <Content Include="footawesome\svgs\brands\amazon-pay.svg" />
+    <Content Include="footawesome\svgs\brands\amazon.svg" />
+    <Content Include="footawesome\svgs\brands\amilia.svg" />
+    <Content Include="footawesome\svgs\brands\android.svg" />
+    <Content Include="footawesome\svgs\brands\angellist.svg" />
+    <Content Include="footawesome\svgs\brands\angrycreative.svg" />
+    <Content Include="footawesome\svgs\brands\angular.svg" />
+    <Content Include="footawesome\svgs\brands\app-store-ios.svg" />
+    <Content Include="footawesome\svgs\brands\app-store.svg" />
+    <Content Include="footawesome\svgs\brands\apper.svg" />
+    <Content Include="footawesome\svgs\brands\apple-pay.svg" />
+    <Content Include="footawesome\svgs\brands\apple.svg" />
+    <Content Include="footawesome\svgs\brands\artstation.svg" />
+    <Content Include="footawesome\svgs\brands\asymmetrik.svg" />
+    <Content Include="footawesome\svgs\brands\atlassian.svg" />
+    <Content Include="footawesome\svgs\brands\audible.svg" />
+    <Content Include="footawesome\svgs\brands\autoprefixer.svg" />
+    <Content Include="footawesome\svgs\brands\avianex.svg" />
+    <Content Include="footawesome\svgs\brands\aviato.svg" />
+    <Content Include="footawesome\svgs\brands\aws.svg" />
+    <Content Include="footawesome\svgs\brands\bandcamp.svg" />
+    <Content Include="footawesome\svgs\brands\battle-net.svg" />
+    <Content Include="footawesome\svgs\brands\behance-square.svg" />
+    <Content Include="footawesome\svgs\brands\behance.svg" />
+    <Content Include="footawesome\svgs\brands\bimobject.svg" />
+    <Content Include="footawesome\svgs\brands\bitbucket.svg" />
+    <Content Include="footawesome\svgs\brands\bitcoin.svg" />
+    <Content Include="footawesome\svgs\brands\bity.svg" />
+    <Content Include="footawesome\svgs\brands\black-tie.svg" />
+    <Content Include="footawesome\svgs\brands\blackberry.svg" />
+    <Content Include="footawesome\svgs\brands\blogger-b.svg" />
+    <Content Include="footawesome\svgs\brands\blogger.svg" />
+    <Content Include="footawesome\svgs\brands\bluetooth-b.svg" />
+    <Content Include="footawesome\svgs\brands\bluetooth.svg" />
+    <Content Include="footawesome\svgs\brands\bootstrap.svg" />
+    <Content Include="footawesome\svgs\brands\btc.svg" />
+    <Content Include="footawesome\svgs\brands\buffer.svg" />
+    <Content Include="footawesome\svgs\brands\buromobelexperte.svg" />
+    <Content Include="footawesome\svgs\brands\buy-n-large.svg" />
+    <Content Include="footawesome\svgs\brands\buysellads.svg" />
+    <Content Include="footawesome\svgs\brands\canadian-maple-leaf.svg" />
+    <Content Include="footawesome\svgs\brands\cc-amazon-pay.svg" />
+    <Content Include="footawesome\svgs\brands\cc-amex.svg" />
+    <Content Include="footawesome\svgs\brands\cc-apple-pay.svg" />
+    <Content Include="footawesome\svgs\brands\cc-diners-club.svg" />
+    <Content Include="footawesome\svgs\brands\cc-discover.svg" />
+    <Content Include="footawesome\svgs\brands\cc-jcb.svg" />
+    <Content Include="footawesome\svgs\brands\cc-mastercard.svg" />
+    <Content Include="footawesome\svgs\brands\cc-paypal.svg" />
+    <Content Include="footawesome\svgs\brands\cc-stripe.svg" />
+    <Content Include="footawesome\svgs\brands\cc-visa.svg" />
+    <Content Include="footawesome\svgs\brands\centercode.svg" />
+    <Content Include="footawesome\svgs\brands\centos.svg" />
+    <Content Include="footawesome\svgs\brands\chrome.svg" />
+    <Content Include="footawesome\svgs\brands\chromecast.svg" />
+    <Content Include="footawesome\svgs\brands\cloudscale.svg" />
+    <Content Include="footawesome\svgs\brands\cloudsmith.svg" />
+    <Content Include="footawesome\svgs\brands\cloudversify.svg" />
+    <Content Include="footawesome\svgs\brands\codepen.svg" />
+    <Content Include="footawesome\svgs\brands\codiepie.svg" />
+    <Content Include="footawesome\svgs\brands\confluence.svg" />
+    <Content Include="footawesome\svgs\brands\connectdevelop.svg" />
+    <Content Include="footawesome\svgs\brands\contao.svg" />
+    <Content Include="footawesome\svgs\brands\cotton-bureau.svg" />
+    <Content Include="footawesome\svgs\brands\cpanel.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-by.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-nc-eu.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-nc-jp.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-nc.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-nd.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-pd-alt.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-pd.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-remix.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-sa.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-sampling-plus.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-sampling.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-share.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons-zero.svg" />
+    <Content Include="footawesome\svgs\brands\creative-commons.svg" />
+    <Content Include="footawesome\svgs\brands\critical-role.svg" />
+    <Content Include="footawesome\svgs\brands\css3-alt.svg" />
+    <Content Include="footawesome\svgs\brands\css3.svg" />
+    <Content Include="footawesome\svgs\brands\cuttlefish.svg" />
+    <Content Include="footawesome\svgs\brands\d-and-d-beyond.svg" />
+    <Content Include="footawesome\svgs\brands\d-and-d.svg" />
+    <Content Include="footawesome\svgs\brands\dailymotion.svg" />
+    <Content Include="footawesome\svgs\brands\dashcube.svg" />
+    <Content Include="footawesome\svgs\brands\deezer.svg" />
+    <Content Include="footawesome\svgs\brands\delicious.svg" />
+    <Content Include="footawesome\svgs\brands\deploydog.svg" />
+    <Content Include="footawesome\svgs\brands\deskpro.svg" />
+    <Content Include="footawesome\svgs\brands\dev.svg" />
+    <Content Include="footawesome\svgs\brands\deviantart.svg" />
+    <Content Include="footawesome\svgs\brands\dhl.svg" />
+    <Content Include="footawesome\svgs\brands\diaspora.svg" />
+    <Content Include="footawesome\svgs\brands\digg.svg" />
+    <Content Include="footawesome\svgs\brands\digital-ocean.svg" />
+    <Content Include="footawesome\svgs\brands\discord.svg" />
+    <Content Include="footawesome\svgs\brands\discourse.svg" />
+    <Content Include="footawesome\svgs\brands\dochub.svg" />
+    <Content Include="footawesome\svgs\brands\docker.svg" />
+    <Content Include="footawesome\svgs\brands\draft2digital.svg" />
+    <Content Include="footawesome\svgs\brands\dribbble-square.svg" />
+    <Content Include="footawesome\svgs\brands\dribbble.svg" />
+    <Content Include="footawesome\svgs\brands\dropbox.svg" />
+    <Content Include="footawesome\svgs\brands\drupal.svg" />
+    <Content Include="footawesome\svgs\brands\dyalog.svg" />
+    <Content Include="footawesome\svgs\brands\earlybirds.svg" />
+    <Content Include="footawesome\svgs\brands\ebay.svg" />
+    <Content Include="footawesome\svgs\brands\edge-legacy.svg" />
+    <Content Include="footawesome\svgs\brands\edge.svg" />
+    <Content Include="footawesome\svgs\brands\elementor.svg" />
+    <Content Include="footawesome\svgs\brands\ello.svg" />
+    <Content Include="footawesome\svgs\brands\ember.svg" />
+    <Content Include="footawesome\svgs\brands\empire.svg" />
+    <Content Include="footawesome\svgs\brands\envira.svg" />
+    <Content Include="footawesome\svgs\brands\erlang.svg" />
+    <Content Include="footawesome\svgs\brands\ethereum.svg" />
+    <Content Include="footawesome\svgs\brands\etsy.svg" />
+    <Content Include="footawesome\svgs\brands\evernote.svg" />
+    <Content Include="footawesome\svgs\brands\expeditedssl.svg" />
+    <Content Include="footawesome\svgs\brands\facebook-f.svg" />
+    <Content Include="footawesome\svgs\brands\facebook-messenger.svg" />
+    <Content Include="footawesome\svgs\brands\facebook-square.svg" />
+    <Content Include="footawesome\svgs\brands\facebook.svg" />
+    <Content Include="footawesome\svgs\brands\fantasy-flight-games.svg" />
+    <Content Include="footawesome\svgs\brands\fedex.svg" />
+    <Content Include="footawesome\svgs\brands\fedora.svg" />
+    <Content Include="footawesome\svgs\brands\figma.svg" />
+    <Content Include="footawesome\svgs\brands\firefox-browser.svg" />
+    <Content Include="footawesome\svgs\brands\firefox.svg" />
+    <Content Include="footawesome\svgs\brands\first-order-alt.svg" />
+    <Content Include="footawesome\svgs\brands\first-order.svg" />
+    <Content Include="footawesome\svgs\brands\firstdraft.svg" />
+    <Content Include="footawesome\svgs\brands\flickr.svg" />
+    <Content Include="footawesome\svgs\brands\flipboard.svg" />
+    <Content Include="footawesome\svgs\brands\fly.svg" />
+    <Content Include="footawesome\svgs\brands\font-awesome-alt.svg" />
+    <Content Include="footawesome\svgs\brands\font-awesome-flag.svg" />
+    <Content Include="footawesome\svgs\brands\font-awesome-logo-full.svg" />
+    <Content Include="footawesome\svgs\brands\font-awesome.svg" />
+    <Content Include="footawesome\svgs\brands\fonticons-fi.svg" />
+    <Content Include="footawesome\svgs\brands\fonticons.svg" />
+    <Content Include="footawesome\svgs\brands\fort-awesome-alt.svg" />
+    <Content Include="footawesome\svgs\brands\fort-awesome.svg" />
+    <Content Include="footawesome\svgs\brands\forumbee.svg" />
+    <Content Include="footawesome\svgs\brands\foursquare.svg" />
+    <Content Include="footawesome\svgs\brands\free-code-camp.svg" />
+    <Content Include="footawesome\svgs\brands\freebsd.svg" />
+    <Content Include="footawesome\svgs\brands\fulcrum.svg" />
+    <Content Include="footawesome\svgs\brands\galactic-republic.svg" />
+    <Content Include="footawesome\svgs\brands\galactic-senate.svg" />
+    <Content Include="footawesome\svgs\brands\get-pocket.svg" />
+    <Content Include="footawesome\svgs\brands\gg-circle.svg" />
+    <Content Include="footawesome\svgs\brands\gg.svg" />
+    <Content Include="footawesome\svgs\brands\git-alt.svg" />
+    <Content Include="footawesome\svgs\brands\git-square.svg" />
+    <Content Include="footawesome\svgs\brands\git.svg" />
+    <Content Include="footawesome\svgs\brands\github-alt.svg" />
+    <Content Include="footawesome\svgs\brands\github-square.svg" />
+    <Content Include="footawesome\svgs\brands\github.svg" />
+    <Content Include="footawesome\svgs\brands\gitkraken.svg" />
+    <Content Include="footawesome\svgs\brands\gitlab.svg" />
+    <Content Include="footawesome\svgs\brands\gitter.svg" />
+    <Content Include="footawesome\svgs\brands\glide-g.svg" />
+    <Content Include="footawesome\svgs\brands\glide.svg" />
+    <Content Include="footawesome\svgs\brands\gofore.svg" />
+    <Content Include="footawesome\svgs\brands\goodreads-g.svg" />
+    <Content Include="footawesome\svgs\brands\goodreads.svg" />
+    <Content Include="footawesome\svgs\brands\google-drive.svg" />
+    <Content Include="footawesome\svgs\brands\google-pay.svg" />
+    <Content Include="footawesome\svgs\brands\google-play.svg" />
+    <Content Include="footawesome\svgs\brands\google-plus-g.svg" />
+    <Content Include="footawesome\svgs\brands\google-plus-square.svg" />
+    <Content Include="footawesome\svgs\brands\google-plus.svg" />
+    <Content Include="footawesome\svgs\brands\google-wallet.svg" />
+    <Content Include="footawesome\svgs\brands\google.svg" />
+    <Content Include="footawesome\svgs\brands\gratipay.svg" />
+    <Content Include="footawesome\svgs\brands\grav.svg" />
+    <Content Include="footawesome\svgs\brands\gripfire.svg" />
+    <Content Include="footawesome\svgs\brands\grunt.svg" />
+    <Content Include="footawesome\svgs\brands\gulp.svg" />
+    <Content Include="footawesome\svgs\brands\hacker-news-square.svg" />
+    <Content Include="footawesome\svgs\brands\hacker-news.svg" />
+    <Content Include="footawesome\svgs\brands\hackerrank.svg" />
+    <Content Include="footawesome\svgs\brands\hips.svg" />
+    <Content Include="footawesome\svgs\brands\hire-a-helper.svg" />
+    <Content Include="footawesome\svgs\brands\hooli.svg" />
+    <Content Include="footawesome\svgs\brands\hornbill.svg" />
+    <Content Include="footawesome\svgs\brands\hotjar.svg" />
+    <Content Include="footawesome\svgs\brands\houzz.svg" />
+    <Content Include="footawesome\svgs\brands\html5.svg" />
+    <Content Include="footawesome\svgs\brands\hubspot.svg" />
+    <Content Include="footawesome\svgs\brands\ideal.svg" />
+    <Content Include="footawesome\svgs\brands\imdb.svg" />
+    <Content Include="footawesome\svgs\brands\instagram-square.svg" />
+    <Content Include="footawesome\svgs\brands\instagram.svg" />
+    <Content Include="footawesome\svgs\brands\intercom.svg" />
+    <Content Include="footawesome\svgs\brands\internet-explorer.svg" />
+    <Content Include="footawesome\svgs\brands\invision.svg" />
+    <Content Include="footawesome\svgs\brands\ioxhost.svg" />
+    <Content Include="footawesome\svgs\brands\itch-io.svg" />
+    <Content Include="footawesome\svgs\brands\itunes-note.svg" />
+    <Content Include="footawesome\svgs\brands\itunes.svg" />
+    <Content Include="footawesome\svgs\brands\java.svg" />
+    <Content Include="footawesome\svgs\brands\jedi-order.svg" />
+    <Content Include="footawesome\svgs\brands\jenkins.svg" />
+    <Content Include="footawesome\svgs\brands\jira.svg" />
+    <Content Include="footawesome\svgs\brands\joget.svg" />
+    <Content Include="footawesome\svgs\brands\joomla.svg" />
+    <Content Include="footawesome\svgs\brands\js-square.svg" />
+    <Content Include="footawesome\svgs\brands\js.svg" />
+    <Content Include="footawesome\svgs\brands\jsfiddle.svg" />
+    <Content Include="footawesome\svgs\brands\kaggle.svg" />
+    <Content Include="footawesome\svgs\brands\keybase.svg" />
+    <Content Include="footawesome\svgs\brands\keycdn.svg" />
+    <Content Include="footawesome\svgs\brands\kickstarter-k.svg" />
+    <Content Include="footawesome\svgs\brands\kickstarter.svg" />
+    <Content Include="footawesome\svgs\brands\korvue.svg" />
+    <Content Include="footawesome\svgs\brands\laravel.svg" />
+    <Content Include="footawesome\svgs\brands\lastfm-square.svg" />
+    <Content Include="footawesome\svgs\brands\lastfm.svg" />
+    <Content Include="footawesome\svgs\brands\leanpub.svg" />
+    <Content Include="footawesome\svgs\brands\less.svg" />
+    <Content Include="footawesome\svgs\brands\line.svg" />
+    <Content Include="footawesome\svgs\brands\linkedin-in.svg" />
+    <Content Include="footawesome\svgs\brands\linkedin.svg" />
+    <Content Include="footawesome\svgs\brands\linode.svg" />
+    <Content Include="footawesome\svgs\brands\linux.svg" />
+    <Content Include="footawesome\svgs\brands\lyft.svg" />
+    <Content Include="footawesome\svgs\brands\magento.svg" />
+    <Content Include="footawesome\svgs\brands\mailchimp.svg" />
+    <Content Include="footawesome\svgs\brands\mandalorian.svg" />
+    <Content Include="footawesome\svgs\brands\markdown.svg" />
+    <Content Include="footawesome\svgs\brands\mastodon.svg" />
+    <Content Include="footawesome\svgs\brands\maxcdn.svg" />
+    <Content Include="footawesome\svgs\brands\mdb.svg" />
+    <Content Include="footawesome\svgs\brands\medapps.svg" />
+    <Content Include="footawesome\svgs\brands\medium-m.svg" />
+    <Content Include="footawesome\svgs\brands\medium.svg" />
+    <Content Include="footawesome\svgs\brands\medrt.svg" />
+    <Content Include="footawesome\svgs\brands\meetup.svg" />
+    <Content Include="footawesome\svgs\brands\megaport.svg" />
+    <Content Include="footawesome\svgs\brands\mendeley.svg" />
+    <Content Include="footawesome\svgs\brands\microblog.svg" />
+    <Content Include="footawesome\svgs\brands\microsoft.svg" />
+    <Content Include="footawesome\svgs\brands\mix.svg" />
+    <Content Include="footawesome\svgs\brands\mixcloud.svg" />
+    <Content Include="footawesome\svgs\brands\mixer.svg" />
+    <Content Include="footawesome\svgs\brands\mizuni.svg" />
+    <Content Include="footawesome\svgs\brands\modx.svg" />
+    <Content Include="footawesome\svgs\brands\monero.svg" />
+    <Content Include="footawesome\svgs\brands\napster.svg" />
+    <Content Include="footawesome\svgs\brands\neos.svg" />
+    <Content Include="footawesome\svgs\brands\nimblr.svg" />
+    <Content Include="footawesome\svgs\brands\node-js.svg" />
+    <Content Include="footawesome\svgs\brands\node.svg" />
+    <Content Include="footawesome\svgs\brands\npm.svg" />
+    <Content Include="footawesome\svgs\brands\ns8.svg" />
+    <Content Include="footawesome\svgs\brands\nutritionix.svg" />
+    <Content Include="footawesome\svgs\brands\odnoklassniki-square.svg" />
+    <Content Include="footawesome\svgs\brands\odnoklassniki.svg" />
+    <Content Include="footawesome\svgs\brands\old-republic.svg" />
+    <Content Include="footawesome\svgs\brands\opencart.svg" />
+    <Content Include="footawesome\svgs\brands\openid.svg" />
+    <Content Include="footawesome\svgs\brands\opera.svg" />
+    <Content Include="footawesome\svgs\brands\optin-monster.svg" />
+    <Content Include="footawesome\svgs\brands\orcid.svg" />
+    <Content Include="footawesome\svgs\brands\osi.svg" />
+    <Content Include="footawesome\svgs\brands\page4.svg" />
+    <Content Include="footawesome\svgs\brands\pagelines.svg" />
+    <Content Include="footawesome\svgs\brands\palfed.svg" />
+    <Content Include="footawesome\svgs\brands\patreon.svg" />
+    <Content Include="footawesome\svgs\brands\paypal.svg" />
+    <Content Include="footawesome\svgs\brands\penny-arcade.svg" />
+    <Content Include="footawesome\svgs\brands\periscope.svg" />
+    <Content Include="footawesome\svgs\brands\phabricator.svg" />
+    <Content Include="footawesome\svgs\brands\phoenix-framework.svg" />
+    <Content Include="footawesome\svgs\brands\phoenix-squadron.svg" />
+    <Content Include="footawesome\svgs\brands\php.svg" />
+    <Content Include="footawesome\svgs\brands\pied-piper-alt.svg" />
+    <Content Include="footawesome\svgs\brands\pied-piper-hat.svg" />
+    <Content Include="footawesome\svgs\brands\pied-piper-pp.svg" />
+    <Content Include="footawesome\svgs\brands\pied-piper-square.svg" />
+    <Content Include="footawesome\svgs\brands\pied-piper.svg" />
+    <Content Include="footawesome\svgs\brands\pinterest-p.svg" />
+    <Content Include="footawesome\svgs\brands\pinterest-square.svg" />
+    <Content Include="footawesome\svgs\brands\pinterest.svg" />
+    <Content Include="footawesome\svgs\brands\playstation.svg" />
+    <Content Include="footawesome\svgs\brands\product-hunt.svg" />
+    <Content Include="footawesome\svgs\brands\pushed.svg" />
+    <Content Include="footawesome\svgs\brands\python.svg" />
+    <Content Include="footawesome\svgs\brands\qq.svg" />
+    <Content Include="footawesome\svgs\brands\quinscape.svg" />
+    <Content Include="footawesome\svgs\brands\quora.svg" />
+    <Content Include="footawesome\svgs\brands\r-project.svg" />
+    <Content Include="footawesome\svgs\brands\raspberry-pi.svg" />
+    <Content Include="footawesome\svgs\brands\ravelry.svg" />
+    <Content Include="footawesome\svgs\brands\react.svg" />
+    <Content Include="footawesome\svgs\brands\reacteurope.svg" />
+    <Content Include="footawesome\svgs\brands\readme.svg" />
+    <Content Include="footawesome\svgs\brands\rebel.svg" />
+    <Content Include="footawesome\svgs\brands\red-river.svg" />
+    <Content Include="footawesome\svgs\brands\reddit-alien.svg" />
+    <Content Include="footawesome\svgs\brands\reddit-square.svg" />
+    <Content Include="footawesome\svgs\brands\reddit.svg" />
+    <Content Include="footawesome\svgs\brands\redhat.svg" />
+    <Content Include="footawesome\svgs\brands\renren.svg" />
+    <Content Include="footawesome\svgs\brands\replyd.svg" />
+    <Content Include="footawesome\svgs\brands\researchgate.svg" />
+    <Content Include="footawesome\svgs\brands\resolving.svg" />
+    <Content Include="footawesome\svgs\brands\rev.svg" />
+    <Content Include="footawesome\svgs\brands\rocketchat.svg" />
+    <Content Include="footawesome\svgs\brands\rockrms.svg" />
+    <Content Include="footawesome\svgs\brands\rust.svg" />
+    <Content Include="footawesome\svgs\brands\safari.svg" />
+    <Content Include="footawesome\svgs\brands\salesforce.svg" />
+    <Content Include="footawesome\svgs\brands\sass.svg" />
+    <Content Include="footawesome\svgs\brands\schlix.svg" />
+    <Content Include="footawesome\svgs\brands\scribd.svg" />
+    <Content Include="footawesome\svgs\brands\searchengin.svg" />
+    <Content Include="footawesome\svgs\brands\sellcast.svg" />
+    <Content Include="footawesome\svgs\brands\sellsy.svg" />
+    <Content Include="footawesome\svgs\brands\servicestack.svg" />
+    <Content Include="footawesome\svgs\brands\shirtsinbulk.svg" />
+    <Content Include="footawesome\svgs\brands\shopify.svg" />
+    <Content Include="footawesome\svgs\brands\shopware.svg" />
+    <Content Include="footawesome\svgs\brands\simplybuilt.svg" />
+    <Content Include="footawesome\svgs\brands\sistrix.svg" />
+    <Content Include="footawesome\svgs\brands\sith.svg" />
+    <Content Include="footawesome\svgs\brands\sketch.svg" />
+    <Content Include="footawesome\svgs\brands\skyatlas.svg" />
+    <Content Include="footawesome\svgs\brands\skype.svg" />
+    <Content Include="footawesome\svgs\brands\slack-hash.svg" />
+    <Content Include="footawesome\svgs\brands\slack.svg" />
+    <Content Include="footawesome\svgs\brands\slideshare.svg" />
+    <Content Include="footawesome\svgs\brands\snapchat-ghost.svg" />
+    <Content Include="footawesome\svgs\brands\snapchat-square.svg" />
+    <Content Include="footawesome\svgs\brands\snapchat.svg" />
+    <Content Include="footawesome\svgs\brands\soundcloud.svg" />
+    <Content Include="footawesome\svgs\brands\sourcetree.svg" />
+    <Content Include="footawesome\svgs\brands\speakap.svg" />
+    <Content Include="footawesome\svgs\brands\speaker-deck.svg" />
+    <Content Include="footawesome\svgs\brands\spotify.svg" />
+    <Content Include="footawesome\svgs\brands\squarespace.svg" />
+    <Content Include="footawesome\svgs\brands\stack-exchange.svg" />
+    <Content Include="footawesome\svgs\brands\stack-overflow.svg" />
+    <Content Include="footawesome\svgs\brands\stackpath.svg" />
+    <Content Include="footawesome\svgs\brands\staylinked.svg" />
+    <Content Include="footawesome\svgs\brands\steam-square.svg" />
+    <Content Include="footawesome\svgs\brands\steam-symbol.svg" />
+    <Content Include="footawesome\svgs\brands\steam.svg" />
+    <Content Include="footawesome\svgs\brands\sticker-mule.svg" />
+    <Content Include="footawesome\svgs\brands\strava.svg" />
+    <Content Include="footawesome\svgs\brands\stripe-s.svg" />
+    <Content Include="footawesome\svgs\brands\stripe.svg" />
+    <Content Include="footawesome\svgs\brands\studiovinari.svg" />
+    <Content Include="footawesome\svgs\brands\stumbleupon-circle.svg" />
+    <Content Include="footawesome\svgs\brands\stumbleupon.svg" />
+    <Content Include="footawesome\svgs\brands\superpowers.svg" />
+    <Content Include="footawesome\svgs\brands\supple.svg" />
+    <Content Include="footawesome\svgs\brands\suse.svg" />
+    <Content Include="footawesome\svgs\brands\swift.svg" />
+    <Content Include="footawesome\svgs\brands\symfony.svg" />
+    <Content Include="footawesome\svgs\brands\teamspeak.svg" />
+    <Content Include="footawesome\svgs\brands\telegram-plane.svg" />
+    <Content Include="footawesome\svgs\brands\telegram.svg" />
+    <Content Include="footawesome\svgs\brands\tencent-weibo.svg" />
+    <Content Include="footawesome\svgs\brands\the-red-yeti.svg" />
+    <Content Include="footawesome\svgs\brands\themeco.svg" />
+    <Content Include="footawesome\svgs\brands\themeisle.svg" />
+    <Content Include="footawesome\svgs\brands\think-peaks.svg" />
+    <Content Include="footawesome\svgs\brands\tiktok.svg" />
+    <Content Include="footawesome\svgs\brands\trade-federation.svg" />
+    <Content Include="footawesome\svgs\brands\trello.svg" />
+    <Content Include="footawesome\svgs\brands\tripadvisor.svg" />
+    <Content Include="footawesome\svgs\brands\tumblr-square.svg" />
+    <Content Include="footawesome\svgs\brands\tumblr.svg" />
+    <Content Include="footawesome\svgs\brands\twitch.svg" />
+    <Content Include="footawesome\svgs\brands\twitter-square.svg" />
+    <Content Include="footawesome\svgs\brands\twitter.svg" />
+    <Content Include="footawesome\svgs\brands\typo3.svg" />
+    <Content Include="footawesome\svgs\brands\uber.svg" />
+    <Content Include="footawesome\svgs\brands\ubuntu.svg" />
+    <Content Include="footawesome\svgs\brands\uikit.svg" />
+    <Content Include="footawesome\svgs\brands\umbraco.svg" />
+    <Content Include="footawesome\svgs\brands\uniregistry.svg" />
+    <Content Include="footawesome\svgs\brands\unity.svg" />
+    <Content Include="footawesome\svgs\brands\unsplash.svg" />
+    <Content Include="footawesome\svgs\brands\untappd.svg" />
+    <Content Include="footawesome\svgs\brands\ups.svg" />
+    <Content Include="footawesome\svgs\brands\usb.svg" />
+    <Content Include="footawesome\svgs\brands\usps.svg" />
+    <Content Include="footawesome\svgs\brands\ussunnah.svg" />
+    <Content Include="footawesome\svgs\brands\vaadin.svg" />
+    <Content Include="footawesome\svgs\brands\viacoin.svg" />
+    <Content Include="footawesome\svgs\brands\viadeo-square.svg" />
+    <Content Include="footawesome\svgs\brands\viadeo.svg" />
+    <Content Include="footawesome\svgs\brands\viber.svg" />
+    <Content Include="footawesome\svgs\brands\vimeo-square.svg" />
+    <Content Include="footawesome\svgs\brands\vimeo-v.svg" />
+    <Content Include="footawesome\svgs\brands\vimeo.svg" />
+    <Content Include="footawesome\svgs\brands\vine.svg" />
+    <Content Include="footawesome\svgs\brands\vk.svg" />
+    <Content Include="footawesome\svgs\brands\vnv.svg" />
+    <Content Include="footawesome\svgs\brands\vuejs.svg" />
+    <Content Include="footawesome\svgs\brands\waze.svg" />
+    <Content Include="footawesome\svgs\brands\weebly.svg" />
+    <Content Include="footawesome\svgs\brands\weibo.svg" />
+    <Content Include="footawesome\svgs\brands\weixin.svg" />
+    <Content Include="footawesome\svgs\brands\whatsapp-square.svg" />
+    <Content Include="footawesome\svgs\brands\whatsapp.svg" />
+    <Content Include="footawesome\svgs\brands\whmcs.svg" />
+    <Content Include="footawesome\svgs\brands\wikipedia-w.svg" />
+    <Content Include="footawesome\svgs\brands\windows.svg" />
+    <Content Include="footawesome\svgs\brands\wix.svg" />
+    <Content Include="footawesome\svgs\brands\wizards-of-the-coast.svg" />
+    <Content Include="footawesome\svgs\brands\wolf-pack-battalion.svg" />
+    <Content Include="footawesome\svgs\brands\wordpress-simple.svg" />
+    <Content Include="footawesome\svgs\brands\wordpress.svg" />
+    <Content Include="footawesome\svgs\brands\wpbeginner.svg" />
+    <Content Include="footawesome\svgs\brands\wpexplorer.svg" />
+    <Content Include="footawesome\svgs\brands\wpforms.svg" />
+    <Content Include="footawesome\svgs\brands\wpressr.svg" />
+    <Content Include="footawesome\svgs\brands\xbox.svg" />
+    <Content Include="footawesome\svgs\brands\xing-square.svg" />
+    <Content Include="footawesome\svgs\brands\xing.svg" />
+    <Content Include="footawesome\svgs\brands\y-combinator.svg" />
+    <Content Include="footawesome\svgs\brands\yahoo.svg" />
+    <Content Include="footawesome\svgs\brands\yammer.svg" />
+    <Content Include="footawesome\svgs\brands\yandex-international.svg" />
+    <Content Include="footawesome\svgs\brands\yandex.svg" />
+    <Content Include="footawesome\svgs\brands\yarn.svg" />
+    <Content Include="footawesome\svgs\brands\yelp.svg" />
+    <Content Include="footawesome\svgs\brands\yoast.svg" />
+    <Content Include="footawesome\svgs\brands\youtube-square.svg" />
+    <Content Include="footawesome\svgs\brands\youtube.svg" />
+    <Content Include="footawesome\svgs\brands\zhihu.svg" />
+    <Content Include="footawesome\svgs\regular\address-book.svg" />
+    <Content Include="footawesome\svgs\regular\address-card.svg" />
+    <Content Include="footawesome\svgs\regular\angry.svg" />
+    <Content Include="footawesome\svgs\regular\arrow-alt-circle-down.svg" />
+    <Content Include="footawesome\svgs\regular\arrow-alt-circle-left.svg" />
+    <Content Include="footawesome\svgs\regular\arrow-alt-circle-right.svg" />
+    <Content Include="footawesome\svgs\regular\arrow-alt-circle-up.svg" />
+    <Content Include="footawesome\svgs\regular\bell-slash.svg" />
+    <Content Include="footawesome\svgs\regular\bell.svg" />
+    <Content Include="footawesome\svgs\regular\bookmark.svg" />
+    <Content Include="footawesome\svgs\regular\building.svg" />
+    <Content Include="footawesome\svgs\regular\calendar-alt.svg" />
+    <Content Include="footawesome\svgs\regular\calendar-check.svg" />
+    <Content Include="footawesome\svgs\regular\calendar-minus.svg" />
+    <Content Include="footawesome\svgs\regular\calendar-plus.svg" />
+    <Content Include="footawesome\svgs\regular\calendar-times.svg" />
+    <Content Include="footawesome\svgs\regular\calendar.svg" />
+    <Content Include="footawesome\svgs\regular\caret-square-down.svg" />
+    <Content Include="footawesome\svgs\regular\caret-square-left.svg" />
+    <Content Include="footawesome\svgs\regular\caret-square-right.svg" />
+    <Content Include="footawesome\svgs\regular\caret-square-up.svg" />
+    <Content Include="footawesome\svgs\regular\chart-bar.svg" />
+    <Content Include="footawesome\svgs\regular\check-circle.svg" />
+    <Content Include="footawesome\svgs\regular\check-square.svg" />
+    <Content Include="footawesome\svgs\regular\circle.svg" />
+    <Content Include="footawesome\svgs\regular\clipboard.svg" />
+    <Content Include="footawesome\svgs\regular\clock.svg" />
+    <Content Include="footawesome\svgs\regular\clone.svg" />
+    <Content Include="footawesome\svgs\regular\closed-captioning.svg" />
+    <Content Include="footawesome\svgs\regular\comment-alt.svg" />
+    <Content Include="footawesome\svgs\regular\comment-dots.svg" />
+    <Content Include="footawesome\svgs\regular\comment.svg" />
+    <Content Include="footawesome\svgs\regular\comments.svg" />
+    <Content Include="footawesome\svgs\regular\compass.svg" />
+    <Content Include="footawesome\svgs\regular\copy.svg" />
+    <Content Include="footawesome\svgs\regular\copyright.svg" />
+    <Content Include="footawesome\svgs\regular\credit-card.svg" />
+    <Content Include="footawesome\svgs\regular\dizzy.svg" />
+    <Content Include="footawesome\svgs\regular\dot-circle.svg" />
+    <Content Include="footawesome\svgs\regular\edit.svg" />
+    <Content Include="footawesome\svgs\regular\envelope-open.svg" />
+    <Content Include="footawesome\svgs\regular\envelope.svg" />
+    <Content Include="footawesome\svgs\regular\eye-slash.svg" />
+    <Content Include="footawesome\svgs\regular\eye.svg" />
+    <Content Include="footawesome\svgs\regular\file-alt.svg" />
+    <Content Include="footawesome\svgs\regular\file-archive.svg" />
+    <Content Include="footawesome\svgs\regular\file-audio.svg" />
+    <Content Include="footawesome\svgs\regular\file-code.svg" />
+    <Content Include="footawesome\svgs\regular\file-excel.svg" />
+    <Content Include="footawesome\svgs\regular\file-image.svg" />
+    <Content Include="footawesome\svgs\regular\file-pdf.svg" />
+    <Content Include="footawesome\svgs\regular\file-powerpoint.svg" />
+    <Content Include="footawesome\svgs\regular\file-video.svg" />
+    <Content Include="footawesome\svgs\regular\file-word.svg" />
+    <Content Include="footawesome\svgs\regular\file.svg" />
+    <Content Include="footawesome\svgs\regular\flag.svg" />
+    <Content Include="footawesome\svgs\regular\flushed.svg" />
+    <Content Include="footawesome\svgs\regular\folder-open.svg" />
+    <Content Include="footawesome\svgs\regular\folder.svg" />
+    <Content Include="footawesome\svgs\regular\font-awesome-logo-full.svg" />
+    <Content Include="footawesome\svgs\regular\frown-open.svg" />
+    <Content Include="footawesome\svgs\regular\frown.svg" />
+    <Content Include="footawesome\svgs\regular\futbol.svg" />
+    <Content Include="footawesome\svgs\regular\gem.svg" />
+    <Content Include="footawesome\svgs\regular\grimace.svg" />
+    <Content Include="footawesome\svgs\regular\grin-alt.svg" />
+    <Content Include="footawesome\svgs\regular\grin-beam-sweat.svg" />
+    <Content Include="footawesome\svgs\regular\grin-beam.svg" />
+    <Content Include="footawesome\svgs\regular\grin-hearts.svg" />
+    <Content Include="footawesome\svgs\regular\grin-squint-tears.svg" />
+    <Content Include="footawesome\svgs\regular\grin-squint.svg" />
+    <Content Include="footawesome\svgs\regular\grin-stars.svg" />
+    <Content Include="footawesome\svgs\regular\grin-tears.svg" />
+    <Content Include="footawesome\svgs\regular\grin-tongue-squint.svg" />
+    <Content Include="footawesome\svgs\regular\grin-tongue-wink.svg" />
+    <Content Include="footawesome\svgs\regular\grin-tongue.svg" />
+    <Content Include="footawesome\svgs\regular\grin-wink.svg" />
+    <Content Include="footawesome\svgs\regular\grin.svg" />
+    <Content Include="footawesome\svgs\regular\hand-lizard.svg" />
+    <Content Include="footawesome\svgs\regular\hand-paper.svg" />
+    <Content Include="footawesome\svgs\regular\hand-peace.svg" />
+    <Content Include="footawesome\svgs\regular\hand-point-down.svg" />
+    <Content Include="footawesome\svgs\regular\hand-point-left.svg" />
+    <Content Include="footawesome\svgs\regular\hand-point-right.svg" />
+    <Content Include="footawesome\svgs\regular\hand-point-up.svg" />
+    <Content Include="footawesome\svgs\regular\hand-pointer.svg" />
+    <Content Include="footawesome\svgs\regular\hand-rock.svg" />
+    <Content Include="footawesome\svgs\regular\hand-scissors.svg" />
+    <Content Include="footawesome\svgs\regular\hand-spock.svg" />
+    <Content Include="footawesome\svgs\regular\handshake.svg" />
+    <Content Include="footawesome\svgs\regular\hdd.svg" />
+    <Content Include="footawesome\svgs\regular\heart.svg" />
+    <Content Include="footawesome\svgs\regular\hospital.svg" />
+    <Content Include="footawesome\svgs\regular\hourglass.svg" />
+    <Content Include="footawesome\svgs\regular\id-badge.svg" />
+    <Content Include="footawesome\svgs\regular\id-card.svg" />
+    <Content Include="footawesome\svgs\regular\image.svg" />
+    <Content Include="footawesome\svgs\regular\images.svg" />
+    <Content Include="footawesome\svgs\regular\keyboard.svg" />
+    <Content Include="footawesome\svgs\regular\kiss-beam.svg" />
+    <Content Include="footawesome\svgs\regular\kiss-wink-heart.svg" />
+    <Content Include="footawesome\svgs\regular\kiss.svg" />
+    <Content Include="footawesome\svgs\regular\laugh-beam.svg" />
+    <Content Include="footawesome\svgs\regular\laugh-squint.svg" />
+    <Content Include="footawesome\svgs\regular\laugh-wink.svg" />
+    <Content Include="footawesome\svgs\regular\laugh.svg" />
+    <Content Include="footawesome\svgs\regular\lemon.svg" />
+    <Content Include="footawesome\svgs\regular\life-ring.svg" />
+    <Content Include="footawesome\svgs\regular\lightbulb.svg" />
+    <Content Include="footawesome\svgs\regular\list-alt.svg" />
+    <Content Include="footawesome\svgs\regular\map.svg" />
+    <Content Include="footawesome\svgs\regular\meh-blank.svg" />
+    <Content Include="footawesome\svgs\regular\meh-rolling-eyes.svg" />
+    <Content Include="footawesome\svgs\regular\meh.svg" />
+    <Content Include="footawesome\svgs\regular\minus-square.svg" />
+    <Content Include="footawesome\svgs\regular\money-bill-alt.svg" />
+    <Content Include="footawesome\svgs\regular\moon.svg" />
+    <Content Include="footawesome\svgs\regular\newspaper.svg" />
+    <Content Include="footawesome\svgs\regular\object-group.svg" />
+    <Content Include="footawesome\svgs\regular\object-ungroup.svg" />
+    <Content Include="footawesome\svgs\regular\paper-plane.svg" />
+    <Content Include="footawesome\svgs\regular\pause-circle.svg" />
+    <Content Include="footawesome\svgs\regular\play-circle.svg" />
+    <Content Include="footawesome\svgs\regular\plus-square.svg" />
+    <Content Include="footawesome\svgs\regular\question-circle.svg" />
+    <Content Include="footawesome\svgs\regular\registered.svg" />
+    <Content Include="footawesome\svgs\regular\sad-cry.svg" />
+    <Content Include="footawesome\svgs\regular\sad-tear.svg" />
+    <Content Include="footawesome\svgs\regular\save.svg" />
+    <Content Include="footawesome\svgs\regular\share-square.svg" />
+    <Content Include="footawesome\svgs\regular\smile-beam.svg" />
+    <Content Include="footawesome\svgs\regular\smile-wink.svg" />
+    <Content Include="footawesome\svgs\regular\smile.svg" />
+    <Content Include="footawesome\svgs\regular\snowflake.svg" />
+    <Content Include="footawesome\svgs\regular\square.svg" />
+    <Content Include="footawesome\svgs\regular\star-half.svg" />
+    <Content Include="footawesome\svgs\regular\star.svg" />
+    <Content Include="footawesome\svgs\regular\sticky-note.svg" />
+    <Content Include="footawesome\svgs\regular\stop-circle.svg" />
+    <Content Include="footawesome\svgs\regular\sun.svg" />
+    <Content Include="footawesome\svgs\regular\surprise.svg" />
+    <Content Include="footawesome\svgs\regular\thumbs-down.svg" />
+    <Content Include="footawesome\svgs\regular\thumbs-up.svg" />
+    <Content Include="footawesome\svgs\regular\times-circle.svg" />
+    <Content Include="footawesome\svgs\regular\tired.svg" />
+    <Content Include="footawesome\svgs\regular\trash-alt.svg" />
+    <Content Include="footawesome\svgs\regular\user-circle.svg" />
+    <Content Include="footawesome\svgs\regular\user.svg" />
+    <Content Include="footawesome\svgs\regular\window-close.svg" />
+    <Content Include="footawesome\svgs\regular\window-maximize.svg" />
+    <Content Include="footawesome\svgs\regular\window-minimize.svg" />
+    <Content Include="footawesome\svgs\regular\window-restore.svg" />
+    <Content Include="footawesome\svgs\solid\ad.svg" />
+    <Content Include="footawesome\svgs\solid\address-book.svg" />
+    <Content Include="footawesome\svgs\solid\address-card.svg" />
+    <Content Include="footawesome\svgs\solid\adjust.svg" />
+    <Content Include="footawesome\svgs\solid\air-freshener.svg" />
+    <Content Include="footawesome\svgs\solid\align-center.svg" />
+    <Content Include="footawesome\svgs\solid\align-justify.svg" />
+    <Content Include="footawesome\svgs\solid\align-left.svg" />
+    <Content Include="footawesome\svgs\solid\align-right.svg" />
+    <Content Include="footawesome\svgs\solid\allergies.svg" />
+    <Content Include="footawesome\svgs\solid\ambulance.svg" />
+    <Content Include="footawesome\svgs\solid\american-sign-language-interpreting.svg" />
+    <Content Include="footawesome\svgs\solid\anchor.svg" />
+    <Content Include="footawesome\svgs\solid\angle-double-down.svg" />
+    <Content Include="footawesome\svgs\solid\angle-double-left.svg" />
+    <Content Include="footawesome\svgs\solid\angle-double-right.svg" />
+    <Content Include="footawesome\svgs\solid\angle-double-up.svg" />
+    <Content Include="footawesome\svgs\solid\angle-down.svg" />
+    <Content Include="footawesome\svgs\solid\angle-left.svg" />
+    <Content Include="footawesome\svgs\solid\angle-right.svg" />
+    <Content Include="footawesome\svgs\solid\angle-up.svg" />
+    <Content Include="footawesome\svgs\solid\angry.svg" />
+    <Content Include="footawesome\svgs\solid\ankh.svg" />
+    <Content Include="footawesome\svgs\solid\apple-alt.svg" />
+    <Content Include="footawesome\svgs\solid\archive.svg" />
+    <Content Include="footawesome\svgs\solid\archway.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-alt-circle-down.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-alt-circle-left.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-alt-circle-right.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-alt-circle-up.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-circle-down.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-circle-left.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-circle-right.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-circle-up.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-down.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-left.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-right.svg" />
+    <Content Include="footawesome\svgs\solid\arrow-up.svg" />
+    <Content Include="footawesome\svgs\solid\arrows-alt-h.svg" />
+    <Content Include="footawesome\svgs\solid\arrows-alt-v.svg" />
+    <Content Include="footawesome\svgs\solid\arrows-alt.svg" />
+    <Content Include="footawesome\svgs\solid\assistive-listening-systems.svg" />
+    <Content Include="footawesome\svgs\solid\asterisk.svg" />
+    <Content Include="footawesome\svgs\solid\at.svg" />
+    <Content Include="footawesome\svgs\solid\atlas.svg" />
+    <Content Include="footawesome\svgs\solid\atom.svg" />
+    <Content Include="footawesome\svgs\solid\audio-description.svg" />
+    <Content Include="footawesome\svgs\solid\award.svg" />
+    <Content Include="footawesome\svgs\solid\baby-carriage.svg" />
+    <Content Include="footawesome\svgs\solid\baby.svg" />
+    <Content Include="footawesome\svgs\solid\backspace.svg" />
+    <Content Include="footawesome\svgs\solid\backward.svg" />
+    <Content Include="footawesome\svgs\solid\bacon.svg" />
+    <Content Include="footawesome\svgs\solid\bacteria.svg" />
+    <Content Include="footawesome\svgs\solid\bacterium.svg" />
+    <Content Include="footawesome\svgs\solid\bahai.svg" />
+    <Content Include="footawesome\svgs\solid\balance-scale-left.svg" />
+    <Content Include="footawesome\svgs\solid\balance-scale-right.svg" />
+    <Content Include="footawesome\svgs\solid\balance-scale.svg" />
+    <Content Include="footawesome\svgs\solid\ban.svg" />
+    <Content Include="footawesome\svgs\solid\band-aid.svg" />
+    <Content Include="footawesome\svgs\solid\barcode.svg" />
+    <Content Include="footawesome\svgs\solid\bars.svg" />
+    <Content Include="footawesome\svgs\solid\baseball-ball.svg" />
+    <Content Include="footawesome\svgs\solid\basketball-ball.svg" />
+    <Content Include="footawesome\svgs\solid\bath.svg" />
+    <Content Include="footawesome\svgs\solid\battery-empty.svg" />
+    <Content Include="footawesome\svgs\solid\battery-full.svg" />
+    <Content Include="footawesome\svgs\solid\battery-half.svg" />
+    <Content Include="footawesome\svgs\solid\battery-quarter.svg" />
+    <Content Include="footawesome\svgs\solid\battery-three-quarters.svg" />
+    <Content Include="footawesome\svgs\solid\bed.svg" />
+    <Content Include="footawesome\svgs\solid\beer.svg" />
+    <Content Include="footawesome\svgs\solid\bell-slash.svg" />
+    <Content Include="footawesome\svgs\solid\bell.svg" />
+    <Content Include="footawesome\svgs\solid\bezier-curve.svg" />
+    <Content Include="footawesome\svgs\solid\bible.svg" />
+    <Content Include="footawesome\svgs\solid\bicycle.svg" />
+    <Content Include="footawesome\svgs\solid\biking.svg" />
+    <Content Include="footawesome\svgs\solid\binoculars.svg" />
+    <Content Include="footawesome\svgs\solid\biohazard.svg" />
+    <Content Include="footawesome\svgs\solid\birthday-cake.svg" />
+    <Content Include="footawesome\svgs\solid\blender-phone.svg" />
+    <Content Include="footawesome\svgs\solid\blender.svg" />
+    <Content Include="footawesome\svgs\solid\blind.svg" />
+    <Content Include="footawesome\svgs\solid\blog.svg" />
+    <Content Include="footawesome\svgs\solid\bold.svg" />
+    <Content Include="footawesome\svgs\solid\bolt.svg" />
+    <Content Include="footawesome\svgs\solid\bomb.svg" />
+    <Content Include="footawesome\svgs\solid\bone.svg" />
+    <Content Include="footawesome\svgs\solid\bong.svg" />
+    <Content Include="footawesome\svgs\solid\book-dead.svg" />
+    <Content Include="footawesome\svgs\solid\book-medical.svg" />
+    <Content Include="footawesome\svgs\solid\book-open.svg" />
+    <Content Include="footawesome\svgs\solid\book-reader.svg" />
+    <Content Include="footawesome\svgs\solid\book.svg" />
+    <Content Include="footawesome\svgs\solid\bookmark.svg" />
+    <Content Include="footawesome\svgs\solid\border-all.svg" />
+    <Content Include="footawesome\svgs\solid\border-none.svg" />
+    <Content Include="footawesome\svgs\solid\border-style.svg" />
+    <Content Include="footawesome\svgs\solid\bowling-ball.svg" />
+    <Content Include="footawesome\svgs\solid\box-open.svg" />
+    <Content Include="footawesome\svgs\solid\box-tissue.svg" />
+    <Content Include="footawesome\svgs\solid\box.svg" />
+    <Content Include="footawesome\svgs\solid\boxes.svg" />
+    <Content Include="footawesome\svgs\solid\braille.svg" />
+    <Content Include="footawesome\svgs\solid\brain.svg" />
+    <Content Include="footawesome\svgs\solid\bread-slice.svg" />
+    <Content Include="footawesome\svgs\solid\briefcase-medical.svg" />
+    <Content Include="footawesome\svgs\solid\briefcase.svg" />
+    <Content Include="footawesome\svgs\solid\broadcast-tower.svg" />
+    <Content Include="footawesome\svgs\solid\broom.svg" />
+    <Content Include="footawesome\svgs\solid\brush.svg" />
+    <Content Include="footawesome\svgs\solid\bug.svg" />
+    <Content Include="footawesome\svgs\solid\building.svg" />
+    <Content Include="footawesome\svgs\solid\bullhorn.svg" />
+    <Content Include="footawesome\svgs\solid\bullseye.svg" />
+    <Content Include="footawesome\svgs\solid\burn.svg" />
+    <Content Include="footawesome\svgs\solid\bus-alt.svg" />
+    <Content Include="footawesome\svgs\solid\bus.svg" />
+    <Content Include="footawesome\svgs\solid\business-time.svg" />
+    <Content Include="footawesome\svgs\solid\calculator.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-alt.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-check.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-day.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-minus.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-plus.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-times.svg" />
+    <Content Include="footawesome\svgs\solid\calendar-week.svg" />
+    <Content Include="footawesome\svgs\solid\calendar.svg" />
+    <Content Include="footawesome\svgs\solid\camera-retro.svg" />
+    <Content Include="footawesome\svgs\solid\camera.svg" />
+    <Content Include="footawesome\svgs\solid\campground.svg" />
+    <Content Include="footawesome\svgs\solid\candy-cane.svg" />
+    <Content Include="footawesome\svgs\solid\cannabis.svg" />
+    <Content Include="footawesome\svgs\solid\capsules.svg" />
+    <Content Include="footawesome\svgs\solid\car-alt.svg" />
+    <Content Include="footawesome\svgs\solid\car-battery.svg" />
+    <Content Include="footawesome\svgs\solid\car-crash.svg" />
+    <Content Include="footawesome\svgs\solid\car-side.svg" />
+    <Content Include="footawesome\svgs\solid\car.svg" />
+    <Content Include="footawesome\svgs\solid\caravan.svg" />
+    <Content Include="footawesome\svgs\solid\caret-down.svg" />
+    <Content Include="footawesome\svgs\solid\caret-left.svg" />
+    <Content Include="footawesome\svgs\solid\caret-right.svg" />
+    <Content Include="footawesome\svgs\solid\caret-square-down.svg" />
+    <Content Include="footawesome\svgs\solid\caret-square-left.svg" />
+    <Content Include="footawesome\svgs\solid\caret-square-right.svg" />
+    <Content Include="footawesome\svgs\solid\caret-square-up.svg" />
+    <Content Include="footawesome\svgs\solid\caret-up.svg" />
+    <Content Include="footawesome\svgs\solid\carrot.svg" />
+    <Content Include="footawesome\svgs\solid\cart-arrow-down.svg" />
+    <Content Include="footawesome\svgs\solid\cart-plus.svg" />
+    <Content Include="footawesome\svgs\solid\cash-register.svg" />
+    <Content Include="footawesome\svgs\solid\cat.svg" />
+    <Content Include="footawesome\svgs\solid\certificate.svg" />
+    <Content Include="footawesome\svgs\solid\chair.svg" />
+    <Content Include="footawesome\svgs\solid\chalkboard-teacher.svg" />
+    <Content Include="footawesome\svgs\solid\chalkboard.svg" />
+    <Content Include="footawesome\svgs\solid\charging-station.svg" />
+    <Content Include="footawesome\svgs\solid\chart-area.svg" />
+    <Content Include="footawesome\svgs\solid\chart-bar.svg" />
+    <Content Include="footawesome\svgs\solid\chart-line.svg" />
+    <Content Include="footawesome\svgs\solid\chart-pie.svg" />
+    <Content Include="footawesome\svgs\solid\check-circle.svg" />
+    <Content Include="footawesome\svgs\solid\check-double.svg" />
+    <Content Include="footawesome\svgs\solid\check-square.svg" />
+    <Content Include="footawesome\svgs\solid\check.svg" />
+    <Content Include="footawesome\svgs\solid\cheese.svg" />
+    <Content Include="footawesome\svgs\solid\chess-bishop.svg" />
+    <Content Include="footawesome\svgs\solid\chess-board.svg" />
+    <Content Include="footawesome\svgs\solid\chess-king.svg" />
+    <Content Include="footawesome\svgs\solid\chess-knight.svg" />
+    <Content Include="footawesome\svgs\solid\chess-pawn.svg" />
+    <Content Include="footawesome\svgs\solid\chess-queen.svg" />
+    <Content Include="footawesome\svgs\solid\chess-rook.svg" />
+    <Content Include="footawesome\svgs\solid\chess.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-circle-down.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-circle-left.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-circle-right.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-circle-up.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-down.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-left.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-right.svg" />
+    <Content Include="footawesome\svgs\solid\chevron-up.svg" />
+    <Content Include="footawesome\svgs\solid\child.svg" />
+    <Content Include="footawesome\svgs\solid\church.svg" />
+    <Content Include="footawesome\svgs\solid\circle-notch.svg" />
+    <Content Include="footawesome\svgs\solid\circle.svg" />
+    <Content Include="footawesome\svgs\solid\city.svg" />
+    <Content Include="footawesome\svgs\solid\clinic-medical.svg" />
+    <Content Include="footawesome\svgs\solid\clipboard-check.svg" />
+    <Content Include="footawesome\svgs\solid\clipboard-list.svg" />
+    <Content Include="footawesome\svgs\solid\clipboard.svg" />
+    <Content Include="footawesome\svgs\solid\clock.svg" />
+    <Content Include="footawesome\svgs\solid\clone.svg" />
+    <Content Include="footawesome\svgs\solid\closed-captioning.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-download-alt.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-meatball.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-moon-rain.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-moon.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-rain.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-showers-heavy.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-sun-rain.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-sun.svg" />
+    <Content Include="footawesome\svgs\solid\cloud-upload-alt.svg" />
+    <Content Include="footawesome\svgs\solid\cloud.svg" />
+    <Content Include="footawesome\svgs\solid\cocktail.svg" />
+    <Content Include="footawesome\svgs\solid\code-branch.svg" />
+    <Content Include="footawesome\svgs\solid\code.svg" />
+    <Content Include="footawesome\svgs\solid\coffee.svg" />
+    <Content Include="footawesome\svgs\solid\cog.svg" />
+    <Content Include="footawesome\svgs\solid\cogs.svg" />
+    <Content Include="footawesome\svgs\solid\coins.svg" />
+    <Content Include="footawesome\svgs\solid\columns.svg" />
+    <Content Include="footawesome\svgs\solid\comment-alt.svg" />
+    <Content Include="footawesome\svgs\solid\comment-dollar.svg" />
+    <Content Include="footawesome\svgs\solid\comment-dots.svg" />
+    <Content Include="footawesome\svgs\solid\comment-medical.svg" />
+    <Content Include="footawesome\svgs\solid\comment-slash.svg" />
+    <Content Include="footawesome\svgs\solid\comment.svg" />
+    <Content Include="footawesome\svgs\solid\comments-dollar.svg" />
+    <Content Include="footawesome\svgs\solid\comments.svg" />
+    <Content Include="footawesome\svgs\solid\compact-disc.svg" />
+    <Content Include="footawesome\svgs\solid\compass.svg" />
+    <Content Include="footawesome\svgs\solid\compress-alt.svg" />
+    <Content Include="footawesome\svgs\solid\compress-arrows-alt.svg" />
+    <Content Include="footawesome\svgs\solid\compress.svg" />
+    <Content Include="footawesome\svgs\solid\concierge-bell.svg" />
+    <Content Include="footawesome\svgs\solid\cookie-bite.svg" />
+    <Content Include="footawesome\svgs\solid\cookie.svg" />
+    <Content Include="footawesome\svgs\solid\copy.svg" />
+    <Content Include="footawesome\svgs\solid\copyright.svg" />
+    <Content Include="footawesome\svgs\solid\couch.svg" />
+    <Content Include="footawesome\svgs\solid\credit-card.svg" />
+    <Content Include="footawesome\svgs\solid\crop-alt.svg" />
+    <Content Include="footawesome\svgs\solid\crop.svg" />
+    <Content Include="footawesome\svgs\solid\cross.svg" />
+    <Content Include="footawesome\svgs\solid\crosshairs.svg" />
+    <Content Include="footawesome\svgs\solid\crow.svg" />
+    <Content Include="footawesome\svgs\solid\crown.svg" />
+    <Content Include="footawesome\svgs\solid\crutch.svg" />
+    <Content Include="footawesome\svgs\solid\cube.svg" />
+    <Content Include="footawesome\svgs\solid\cubes.svg" />
+    <Content Include="footawesome\svgs\solid\cut.svg" />
+    <Content Include="footawesome\svgs\solid\database.svg" />
+    <Content Include="footawesome\svgs\solid\deaf.svg" />
+    <Content Include="footawesome\svgs\solid\democrat.svg" />
+    <Content Include="footawesome\svgs\solid\desktop.svg" />
+    <Content Include="footawesome\svgs\solid\dharmachakra.svg" />
+    <Content Include="footawesome\svgs\solid\diagnoses.svg" />
+    <Content Include="footawesome\svgs\solid\dice-d20.svg" />
+    <Content Include="footawesome\svgs\solid\dice-d6.svg" />
+    <Content Include="footawesome\svgs\solid\dice-five.svg" />
+    <Content Include="footawesome\svgs\solid\dice-four.svg" />
+    <Content Include="footawesome\svgs\solid\dice-one.svg" />
+    <Content Include="footawesome\svgs\solid\dice-six.svg" />
+    <Content Include="footawesome\svgs\solid\dice-three.svg" />
+    <Content Include="footawesome\svgs\solid\dice-two.svg" />
+    <Content Include="footawesome\svgs\solid\dice.svg" />
+    <Content Include="footawesome\svgs\solid\digital-tachograph.svg" />
+    <Content Include="footawesome\svgs\solid\directions.svg" />
+    <Content Include="footawesome\svgs\solid\disease.svg" />
+    <Content Include="footawesome\svgs\solid\divide.svg" />
+    <Content Include="footawesome\svgs\solid\dizzy.svg" />
+    <Content Include="footawesome\svgs\solid\dna.svg" />
+    <Content Include="footawesome\svgs\solid\dog.svg" />
+    <Content Include="footawesome\svgs\solid\dollar-sign.svg" />
+    <Content Include="footawesome\svgs\solid\dolly-flatbed.svg" />
+    <Content Include="footawesome\svgs\solid\dolly.svg" />
+    <Content Include="footawesome\svgs\solid\donate.svg" />
+    <Content Include="footawesome\svgs\solid\door-closed.svg" />
+    <Content Include="footawesome\svgs\solid\door-open.svg" />
+    <Content Include="footawesome\svgs\solid\dot-circle.svg" />
+    <Content Include="footawesome\svgs\solid\dove.svg" />
+    <Content Include="footawesome\svgs\solid\download.svg" />
+    <Content Include="footawesome\svgs\solid\drafting-compass.svg" />
+    <Content Include="footawesome\svgs\solid\dragon.svg" />
+    <Content Include="footawesome\svgs\solid\draw-polygon.svg" />
+    <Content Include="footawesome\svgs\solid\drum-steelpan.svg" />
+    <Content Include="footawesome\svgs\solid\drum.svg" />
+    <Content Include="footawesome\svgs\solid\drumstick-bite.svg" />
+    <Content Include="footawesome\svgs\solid\dumbbell.svg" />
+    <Content Include="footawesome\svgs\solid\dumpster-fire.svg" />
+    <Content Include="footawesome\svgs\solid\dumpster.svg" />
+    <Content Include="footawesome\svgs\solid\dungeon.svg" />
+    <Content Include="footawesome\svgs\solid\edit.svg" />
+    <Content Include="footawesome\svgs\solid\egg.svg" />
+    <Content Include="footawesome\svgs\solid\eject.svg" />
+    <Content Include="footawesome\svgs\solid\ellipsis-h.svg" />
+    <Content Include="footawesome\svgs\solid\ellipsis-v.svg" />
+    <Content Include="footawesome\svgs\solid\envelope-open-text.svg" />
+    <Content Include="footawesome\svgs\solid\envelope-open.svg" />
+    <Content Include="footawesome\svgs\solid\envelope-square.svg" />
+    <Content Include="footawesome\svgs\solid\envelope.svg" />
+    <Content Include="footawesome\svgs\solid\equals.svg" />
+    <Content Include="footawesome\svgs\solid\eraser.svg" />
+    <Content Include="footawesome\svgs\solid\ethernet.svg" />
+    <Content Include="footawesome\svgs\solid\euro-sign.svg" />
+    <Content Include="footawesome\svgs\solid\exchange-alt.svg" />
+    <Content Include="footawesome\svgs\solid\exclamation-circle.svg" />
+    <Content Include="footawesome\svgs\solid\exclamation-triangle.svg" />
+    <Content Include="footawesome\svgs\solid\exclamation.svg" />
+    <Content Include="footawesome\svgs\solid\expand-alt.svg" />
+    <Content Include="footawesome\svgs\solid\expand-arrows-alt.svg" />
+    <Content Include="footawesome\svgs\solid\expand.svg" />
+    <Content Include="footawesome\svgs\solid\external-link-alt.svg" />
+    <Content Include="footawesome\svgs\solid\external-link-square-alt.svg" />
+    <Content Include="footawesome\svgs\solid\eye-dropper.svg" />
+    <Content Include="footawesome\svgs\solid\eye-slash.svg" />
+    <Content Include="footawesome\svgs\solid\eye.svg" />
+    <Content Include="footawesome\svgs\solid\fan.svg" />
+    <Content Include="footawesome\svgs\solid\fast-backward.svg" />
+    <Content Include="footawesome\svgs\solid\fast-forward.svg" />
+    <Content Include="footawesome\svgs\solid\faucet.svg" />
+    <Content Include="footawesome\svgs\solid\fax.svg" />
+    <Content Include="footawesome\svgs\solid\feather-alt.svg" />
+    <Content Include="footawesome\svgs\solid\feather.svg" />
+    <Content Include="footawesome\svgs\solid\female.svg" />
+    <Content Include="footawesome\svgs\solid\fighter-jet.svg" />
+    <Content Include="footawesome\svgs\solid\file-alt.svg" />
+    <Content Include="footawesome\svgs\solid\file-archive.svg" />
+    <Content Include="footawesome\svgs\solid\file-audio.svg" />
+    <Content Include="footawesome\svgs\solid\file-code.svg" />
+    <Content Include="footawesome\svgs\solid\file-contract.svg" />
+    <Content Include="footawesome\svgs\solid\file-csv.svg" />
+    <Content Include="footawesome\svgs\solid\file-download.svg" />
+    <Content Include="footawesome\svgs\solid\file-excel.svg" />
+    <Content Include="footawesome\svgs\solid\file-export.svg" />
+    <Content Include="footawesome\svgs\solid\file-image.svg" />
+    <Content Include="footawesome\svgs\solid\file-import.svg" />
+    <Content Include="footawesome\svgs\solid\file-invoice-dollar.svg" />
+    <Content Include="footawesome\svgs\solid\file-invoice.svg" />
+    <Content Include="footawesome\svgs\solid\file-medical-alt.svg" />
+    <Content Include="footawesome\svgs\solid\file-medical.svg" />
+    <Content Include="footawesome\svgs\solid\file-pdf.svg" />
+    <Content Include="footawesome\svgs\solid\file-powerpoint.svg" />
+    <Content Include="footawesome\svgs\solid\file-prescription.svg" />
+    <Content Include="footawesome\svgs\solid\file-signature.svg" />
+    <Content Include="footawesome\svgs\solid\file-upload.svg" />
+    <Content Include="footawesome\svgs\solid\file-video.svg" />
+    <Content Include="footawesome\svgs\solid\file-word.svg" />
+    <Content Include="footawesome\svgs\solid\file.svg" />
+    <Content Include="footawesome\svgs\solid\fill-drip.svg" />
+    <Content Include="footawesome\svgs\solid\fill.svg" />
+    <Content Include="footawesome\svgs\solid\film.svg" />
+    <Content Include="footawesome\svgs\solid\filter.svg" />
+    <Content Include="footawesome\svgs\solid\fingerprint.svg" />
+    <Content Include="footawesome\svgs\solid\fire-alt.svg" />
+    <Content Include="footawesome\svgs\solid\fire-extinguisher.svg" />
+    <Content Include="footawesome\svgs\solid\fire.svg" />
+    <Content Include="footawesome\svgs\solid\first-aid.svg" />
+    <Content Include="footawesome\svgs\solid\fish.svg" />
+    <Content Include="footawesome\svgs\solid\fist-raised.svg" />
+    <Content Include="footawesome\svgs\solid\flag-checkered.svg" />
+    <Content Include="footawesome\svgs\solid\flag-usa.svg" />
+    <Content Include="footawesome\svgs\solid\flag.svg" />
+    <Content Include="footawesome\svgs\solid\flask.svg" />
+    <Content Include="footawesome\svgs\solid\flushed.svg" />
+    <Content Include="footawesome\svgs\solid\folder-minus.svg" />
+    <Content Include="footawesome\svgs\solid\folder-open.svg" />
+    <Content Include="footawesome\svgs\solid\folder-plus.svg" />
+    <Content Include="footawesome\svgs\solid\folder.svg" />
+    <Content Include="footawesome\svgs\solid\font-awesome-logo-full.svg" />
+    <Content Include="footawesome\svgs\solid\font.svg" />
+    <Content Include="footawesome\svgs\solid\football-ball.svg" />
+    <Content Include="footawesome\svgs\solid\forward.svg" />
+    <Content Include="footawesome\svgs\solid\frog.svg" />
+    <Content Include="footawesome\svgs\solid\frown-open.svg" />
+    <Content Include="footawesome\svgs\solid\frown.svg" />
+    <Content Include="footawesome\svgs\solid\funnel-dollar.svg" />
+    <Content Include="footawesome\svgs\solid\futbol.svg" />
+    <Content Include="footawesome\svgs\solid\gamepad.svg" />
+    <Content Include="footawesome\svgs\solid\gas-pump.svg" />
+    <Content Include="footawesome\svgs\solid\gavel.svg" />
+    <Content Include="footawesome\svgs\solid\gem.svg" />
+    <Content Include="footawesome\svgs\solid\genderless.svg" />
+    <Content Include="footawesome\svgs\solid\ghost.svg" />
+    <Content Include="footawesome\svgs\solid\gift.svg" />
+    <Content Include="footawesome\svgs\solid\gifts.svg" />
+    <Content Include="footawesome\svgs\solid\glass-cheers.svg" />
+    <Content Include="footawesome\svgs\solid\glass-martini-alt.svg" />
+    <Content Include="footawesome\svgs\solid\glass-martini.svg" />
+    <Content Include="footawesome\svgs\solid\glass-whiskey.svg" />
+    <Content Include="footawesome\svgs\solid\glasses.svg" />
+    <Content Include="footawesome\svgs\solid\globe-africa.svg" />
+    <Content Include="footawesome\svgs\solid\globe-americas.svg" />
+    <Content Include="footawesome\svgs\solid\globe-asia.svg" />
+    <Content Include="footawesome\svgs\solid\globe-europe.svg" />
+    <Content Include="footawesome\svgs\solid\globe.svg" />
+    <Content Include="footawesome\svgs\solid\golf-ball.svg" />
+    <Content Include="footawesome\svgs\solid\gopuram.svg" />
+    <Content Include="footawesome\svgs\solid\graduation-cap.svg" />
+    <Content Include="footawesome\svgs\solid\greater-than-equal.svg" />
+    <Content Include="footawesome\svgs\solid\greater-than.svg" />
+    <Content Include="footawesome\svgs\solid\grimace.svg" />
+    <Content Include="footawesome\svgs\solid\grin-alt.svg" />
+    <Content Include="footawesome\svgs\solid\grin-beam-sweat.svg" />
+    <Content Include="footawesome\svgs\solid\grin-beam.svg" />
+    <Content Include="footawesome\svgs\solid\grin-hearts.svg" />
+    <Content Include="footawesome\svgs\solid\grin-squint-tears.svg" />
+    <Content Include="footawesome\svgs\solid\grin-squint.svg" />
+    <Content Include="footawesome\svgs\solid\grin-stars.svg" />
+    <Content Include="footawesome\svgs\solid\grin-tears.svg" />
+    <Content Include="footawesome\svgs\solid\grin-tongue-squint.svg" />
+    <Content Include="footawesome\svgs\solid\grin-tongue-wink.svg" />
+    <Content Include="footawesome\svgs\solid\grin-tongue.svg" />
+    <Content Include="footawesome\svgs\solid\grin-wink.svg" />
+    <Content Include="footawesome\svgs\solid\grin.svg" />
+    <Content Include="footawesome\svgs\solid\grip-horizontal.svg" />
+    <Content Include="footawesome\svgs\solid\grip-lines-vertical.svg" />
+    <Content Include="footawesome\svgs\solid\grip-lines.svg" />
+    <Content Include="footawesome\svgs\solid\grip-vertical.svg" />
+    <Content Include="footawesome\svgs\solid\guitar.svg" />
+    <Content Include="footawesome\svgs\solid\h-square.svg" />
+    <Content Include="footawesome\svgs\solid\hamburger.svg" />
+    <Content Include="footawesome\svgs\solid\hammer.svg" />
+    <Content Include="footawesome\svgs\solid\hamsa.svg" />
+    <Content Include="footawesome\svgs\solid\hand-holding-heart.svg" />
+    <Content Include="footawesome\svgs\solid\hand-holding-medical.svg" />
+    <Content Include="footawesome\svgs\solid\hand-holding-usd.svg" />
+    <Content Include="footawesome\svgs\solid\hand-holding-water.svg" />
+    <Content Include="footawesome\svgs\solid\hand-holding.svg" />
+    <Content Include="footawesome\svgs\solid\hand-lizard.svg" />
+    <Content Include="footawesome\svgs\solid\hand-middle-finger.svg" />
+    <Content Include="footawesome\svgs\solid\hand-paper.svg" />
+    <Content Include="footawesome\svgs\solid\hand-peace.svg" />
+    <Content Include="footawesome\svgs\solid\hand-point-down.svg" />
+    <Content Include="footawesome\svgs\solid\hand-point-left.svg" />
+    <Content Include="footawesome\svgs\solid\hand-point-right.svg" />
+    <Content Include="footawesome\svgs\solid\hand-point-up.svg" />
+    <Content Include="footawesome\svgs\solid\hand-pointer.svg" />
+    <Content Include="footawesome\svgs\solid\hand-rock.svg" />
+    <Content Include="footawesome\svgs\solid\hand-scissors.svg" />
+    <Content Include="footawesome\svgs\solid\hand-sparkles.svg" />
+    <Content Include="footawesome\svgs\solid\hand-spock.svg" />
+    <Content Include="footawesome\svgs\solid\hands-helping.svg" />
+    <Content Include="footawesome\svgs\solid\hands-wash.svg" />
+    <Content Include="footawesome\svgs\solid\hands.svg" />
+    <Content Include="footawesome\svgs\solid\handshake-alt-slash.svg" />
+    <Content Include="footawesome\svgs\solid\handshake-slash.svg" />
+    <Content Include="footawesome\svgs\solid\handshake.svg" />
+    <Content Include="footawesome\svgs\solid\hanukiah.svg" />
+    <Content Include="footawesome\svgs\solid\hard-hat.svg" />
+    <Content Include="footawesome\svgs\solid\hashtag.svg" />
+    <Content Include="footawesome\svgs\solid\hat-cowboy-side.svg" />
+    <Content Include="footawesome\svgs\solid\hat-cowboy.svg" />
+    <Content Include="footawesome\svgs\solid\hat-wizard.svg" />
+    <Content Include="footawesome\svgs\solid\hdd.svg" />
+    <Content Include="footawesome\svgs\solid\head-side-cough-slash.svg" />
+    <Content Include="footawesome\svgs\solid\head-side-cough.svg" />
+    <Content Include="footawesome\svgs\solid\head-side-mask.svg" />
+    <Content Include="footawesome\svgs\solid\head-side-virus.svg" />
+    <Content Include="footawesome\svgs\solid\heading.svg" />
+    <Content Include="footawesome\svgs\solid\headphones-alt.svg" />
+    <Content Include="footawesome\svgs\solid\headphones.svg" />
+    <Content Include="footawesome\svgs\solid\headset.svg" />
+    <Content Include="footawesome\svgs\solid\heart-broken.svg" />
+    <Content Include="footawesome\svgs\solid\heart.svg" />
+    <Content Include="footawesome\svgs\solid\heartbeat.svg" />
+    <Content Include="footawesome\svgs\solid\helicopter.svg" />
+    <Content Include="footawesome\svgs\solid\highlighter.svg" />
+    <Content Include="footawesome\svgs\solid\hiking.svg" />
+    <Content Include="footawesome\svgs\solid\hippo.svg" />
+    <Content Include="footawesome\svgs\solid\history.svg" />
+    <Content Include="footawesome\svgs\solid\hockey-puck.svg" />
+    <Content Include="footawesome\svgs\solid\holly-berry.svg" />
+    <Content Include="footawesome\svgs\solid\home.svg" />
+    <Content Include="footawesome\svgs\solid\horse-head.svg" />
+    <Content Include="footawesome\svgs\solid\horse.svg" />
+    <Content Include="footawesome\svgs\solid\hospital-alt.svg" />
+    <Content Include="footawesome\svgs\solid\hospital-symbol.svg" />
+    <Content Include="footawesome\svgs\solid\hospital-user.svg" />
+    <Content Include="footawesome\svgs\solid\hospital.svg" />
+    <Content Include="footawesome\svgs\solid\hot-tub.svg" />
+    <Content Include="footawesome\svgs\solid\hotdog.svg" />
+    <Content Include="footawesome\svgs\solid\hotel.svg" />
+    <Content Include="footawesome\svgs\solid\hourglass-end.svg" />
+    <Content Include="footawesome\svgs\solid\hourglass-half.svg" />
+    <Content Include="footawesome\svgs\solid\hourglass-start.svg" />
+    <Content Include="footawesome\svgs\solid\hourglass.svg" />
+    <Content Include="footawesome\svgs\solid\house-damage.svg" />
+    <Content Include="footawesome\svgs\solid\house-user.svg" />
+    <Content Include="footawesome\svgs\solid\hryvnia.svg" />
+    <Content Include="footawesome\svgs\solid\i-cursor.svg" />
+    <Content Include="footawesome\svgs\solid\ice-cream.svg" />
+    <Content Include="footawesome\svgs\solid\icicles.svg" />
+    <Content Include="footawesome\svgs\solid\icons.svg" />
+    <Content Include="footawesome\svgs\solid\id-badge.svg" />
+    <Content Include="footawesome\svgs\solid\id-card-alt.svg" />
+    <Content Include="footawesome\svgs\solid\id-card.svg" />
+    <Content Include="footawesome\svgs\solid\igloo.svg" />
+    <Content Include="footawesome\svgs\solid\image.svg" />
+    <Content Include="footawesome\svgs\solid\images.svg" />
+    <Content Include="footawesome\svgs\solid\inbox.svg" />
+    <Content Include="footawesome\svgs\solid\indent.svg" />
+    <Content Include="footawesome\svgs\solid\industry.svg" />
+    <Content Include="footawesome\svgs\solid\infinity.svg" />
+    <Content Include="footawesome\svgs\solid\info-circle.svg" />
+    <Content Include="footawesome\svgs\solid\info.svg" />
+    <Content Include="footawesome\svgs\solid\italic.svg" />
+    <Content Include="footawesome\svgs\solid\jedi.svg" />
+    <Content Include="footawesome\svgs\solid\joint.svg" />
+    <Content Include="footawesome\svgs\solid\journal-whills.svg" />
+    <Content Include="footawesome\svgs\solid\kaaba.svg" />
+    <Content Include="footawesome\svgs\solid\key.svg" />
+    <Content Include="footawesome\svgs\solid\keyboard.svg" />
+    <Content Include="footawesome\svgs\solid\khanda.svg" />
+    <Content Include="footawesome\svgs\solid\kiss-beam.svg" />
+    <Content Include="footawesome\svgs\solid\kiss-wink-heart.svg" />
+    <Content Include="footawesome\svgs\solid\kiss.svg" />
+    <Content Include="footawesome\svgs\solid\kiwi-bird.svg" />
+    <Content Include="footawesome\svgs\solid\landmark.svg" />
+    <Content Include="footawesome\svgs\solid\language.svg" />
+    <Content Include="footawesome\svgs\solid\laptop-code.svg" />
+    <Content Include="footawesome\svgs\solid\laptop-house.svg" />
+    <Content Include="footawesome\svgs\solid\laptop-medical.svg" />
+    <Content Include="footawesome\svgs\solid\laptop.svg" />
+    <Content Include="footawesome\svgs\solid\laugh-beam.svg" />
+    <Content Include="footawesome\svgs\solid\laugh-squint.svg" />
+    <Content Include="footawesome\svgs\solid\laugh-wink.svg" />
+    <Content Include="footawesome\svgs\solid\laugh.svg" />
+    <Content Include="footawesome\svgs\solid\layer-group.svg" />
+    <Content Include="footawesome\svgs\solid\leaf.svg" />
+    <Content Include="footawesome\svgs\solid\lemon.svg" />
+    <Content Include="footawesome\svgs\solid\less-than-equal.svg" />
+    <Content Include="footawesome\svgs\solid\less-than.svg" />
+    <Content Include="footawesome\svgs\solid\level-down-alt.svg" />
+    <Content Include="footawesome\svgs\solid\level-up-alt.svg" />
+    <Content Include="footawesome\svgs\solid\life-ring.svg" />
+    <Content Include="footawesome\svgs\solid\lightbulb.svg" />
+    <Content Include="footawesome\svgs\solid\link.svg" />
+    <Content Include="footawesome\svgs\solid\lira-sign.svg" />
+    <Content Include="footawesome\svgs\solid\list-alt.svg" />
+    <Content Include="footawesome\svgs\solid\list-ol.svg" />
+    <Content Include="footawesome\svgs\solid\list-ul.svg" />
+    <Content Include="footawesome\svgs\solid\list.svg" />
+    <Content Include="footawesome\svgs\solid\location-arrow.svg" />
+    <Content Include="footawesome\svgs\solid\lock-open.svg" />
+    <Content Include="footawesome\svgs\solid\lock.svg" />
+    <Content Include="footawesome\svgs\solid\long-arrow-alt-down.svg" />
+    <Content Include="footawesome\svgs\solid\long-arrow-alt-left.svg" />
+    <Content Include="footawesome\svgs\solid\long-arrow-alt-right.svg" />
+    <Content Include="footawesome\svgs\solid\long-arrow-alt-up.svg" />
+    <Content Include="footawesome\svgs\solid\low-vision.svg" />
+    <Content Include="footawesome\svgs\solid\luggage-cart.svg" />
+    <Content Include="footawesome\svgs\solid\lungs-virus.svg" />
+    <Content Include="footawesome\svgs\solid\lungs.svg" />
+    <Content Include="footawesome\svgs\solid\magic.svg" />
+    <Content Include="footawesome\svgs\solid\magnet.svg" />
+    <Content Include="footawesome\svgs\solid\mail-bulk.svg" />
+    <Content Include="footawesome\svgs\solid\male.svg" />
+    <Content Include="footawesome\svgs\solid\map-marked-alt.svg" />
+    <Content Include="footawesome\svgs\solid\map-marked.svg" />
+    <Content Include="footawesome\svgs\solid\map-marker-alt.svg" />
+    <Content Include="footawesome\svgs\solid\map-marker.svg" />
+    <Content Include="footawesome\svgs\solid\map-pin.svg" />
+    <Content Include="footawesome\svgs\solid\map-signs.svg" />
+    <Content Include="footawesome\svgs\solid\map.svg" />
+    <Content Include="footawesome\svgs\solid\marker.svg" />
+    <Content Include="footawesome\svgs\solid\mars-double.svg" />
+    <Content Include="footawesome\svgs\solid\mars-stroke-h.svg" />
+    <Content Include="footawesome\svgs\solid\mars-stroke-v.svg" />
+    <Content Include="footawesome\svgs\solid\mars-stroke.svg" />
+    <Content Include="footawesome\svgs\solid\mars.svg" />
+    <Content Include="footawesome\svgs\solid\mask.svg" />
+    <Content Include="footawesome\svgs\solid\medal.svg" />
+    <Content Include="footawesome\svgs\solid\medkit.svg" />
+    <Content Include="footawesome\svgs\solid\meh-blank.svg" />
+    <Content Include="footawesome\svgs\solid\meh-rolling-eyes.svg" />
+    <Content Include="footawesome\svgs\solid\meh.svg" />
+    <Content Include="footawesome\svgs\solid\memory.svg" />
+    <Content Include="footawesome\svgs\solid\menorah.svg" />
+    <Content Include="footawesome\svgs\solid\mercury.svg" />
+    <Content Include="footawesome\svgs\solid\meteor.svg" />
+    <Content Include="footawesome\svgs\solid\microchip.svg" />
+    <Content Include="footawesome\svgs\solid\microphone-alt-slash.svg" />
+    <Content Include="footawesome\svgs\solid\microphone-alt.svg" />
+    <Content Include="footawesome\svgs\solid\microphone-slash.svg" />
+    <Content Include="footawesome\svgs\solid\microphone.svg" />
+    <Content Include="footawesome\svgs\solid\microscope.svg" />
+    <Content Include="footawesome\svgs\solid\minus-circle.svg" />
+    <Content Include="footawesome\svgs\solid\minus-square.svg" />
+    <Content Include="footawesome\svgs\solid\minus.svg" />
+    <Content Include="footawesome\svgs\solid\mitten.svg" />
+    <Content Include="footawesome\svgs\solid\mobile-alt.svg" />
+    <Content Include="footawesome\svgs\solid\mobile.svg" />
+    <Content Include="footawesome\svgs\solid\money-bill-alt.svg" />
+    <Content Include="footawesome\svgs\solid\money-bill-wave-alt.svg" />
+    <Content Include="footawesome\svgs\solid\money-bill-wave.svg" />
+    <Content Include="footawesome\svgs\solid\money-bill.svg" />
+    <Content Include="footawesome\svgs\solid\money-check-alt.svg" />
+    <Content Include="footawesome\svgs\solid\money-check.svg" />
+    <Content Include="footawesome\svgs\solid\monument.svg" />
+    <Content Include="footawesome\svgs\solid\moon.svg" />
+    <Content Include="footawesome\svgs\solid\mortar-pestle.svg" />
+    <Content Include="footawesome\svgs\solid\mosque.svg" />
+    <Content Include="footawesome\svgs\solid\motorcycle.svg" />
+    <Content Include="footawesome\svgs\solid\mountain.svg" />
+    <Content Include="footawesome\svgs\solid\mouse-pointer.svg" />
+    <Content Include="footawesome\svgs\solid\mouse.svg" />
+    <Content Include="footawesome\svgs\solid\mug-hot.svg" />
+    <Content Include="footawesome\svgs\solid\music.svg" />
+    <Content Include="footawesome\svgs\solid\network-wired.svg" />
+    <Content Include="footawesome\svgs\solid\neuter.svg" />
+    <Content Include="footawesome\svgs\solid\newspaper.svg" />
+    <Content Include="footawesome\svgs\solid\not-equal.svg" />
+    <Content Include="footawesome\svgs\solid\notes-medical.svg" />
+    <Content Include="footawesome\svgs\solid\object-group.svg" />
+    <Content Include="footawesome\svgs\solid\object-ungroup.svg" />
+    <Content Include="footawesome\svgs\solid\oil-can.svg" />
+    <Content Include="footawesome\svgs\solid\om.svg" />
+    <Content Include="footawesome\svgs\solid\otter.svg" />
+    <Content Include="footawesome\svgs\solid\outdent.svg" />
+    <Content Include="footawesome\svgs\solid\pager.svg" />
+    <Content Include="footawesome\svgs\solid\paint-brush.svg" />
+    <Content Include="footawesome\svgs\solid\paint-roller.svg" />
+    <Content Include="footawesome\svgs\solid\palette.svg" />
+    <Content Include="footawesome\svgs\solid\pallet.svg" />
+    <Content Include="footawesome\svgs\solid\paper-plane.svg" />
+    <Content Include="footawesome\svgs\solid\paperclip.svg" />
+    <Content Include="footawesome\svgs\solid\parachute-box.svg" />
+    <Content Include="footawesome\svgs\solid\paragraph.svg" />
+    <Content Include="footawesome\svgs\solid\parking.svg" />
+    <Content Include="footawesome\svgs\solid\passport.svg" />
+    <Content Include="footawesome\svgs\solid\pastafarianism.svg" />
+    <Content Include="footawesome\svgs\solid\paste.svg" />
+    <Content Include="footawesome\svgs\solid\pause-circle.svg" />
+    <Content Include="footawesome\svgs\solid\pause.svg" />
+    <Content Include="footawesome\svgs\solid\paw.svg" />
+    <Content Include="footawesome\svgs\solid\peace.svg" />
+    <Content Include="footawesome\svgs\solid\pen-alt.svg" />
+    <Content Include="footawesome\svgs\solid\pen-fancy.svg" />
+    <Content Include="footawesome\svgs\solid\pen-nib.svg" />
+    <Content Include="footawesome\svgs\solid\pen-square.svg" />
+    <Content Include="footawesome\svgs\solid\pen.svg" />
+    <Content Include="footawesome\svgs\solid\pencil-alt.svg" />
+    <Content Include="footawesome\svgs\solid\pencil-ruler.svg" />
+    <Content Include="footawesome\svgs\solid\people-arrows.svg" />
+    <Content Include="footawesome\svgs\solid\people-carry.svg" />
+    <Content Include="footawesome\svgs\solid\pepper-hot.svg" />
+    <Content Include="footawesome\svgs\solid\percent.svg" />
+    <Content Include="footawesome\svgs\solid\percentage.svg" />
+    <Content Include="footawesome\svgs\solid\person-booth.svg" />
+    <Content Include="footawesome\svgs\solid\phone-alt.svg" />
+    <Content Include="footawesome\svgs\solid\phone-slash.svg" />
+    <Content Include="footawesome\svgs\solid\phone-square-alt.svg" />
+    <Content Include="footawesome\svgs\solid\phone-square.svg" />
+    <Content Include="footawesome\svgs\solid\phone-volume.svg" />
+    <Content Include="footawesome\svgs\solid\phone.svg" />
+    <Content Include="footawesome\svgs\solid\photo-video.svg" />
+    <Content Include="footawesome\svgs\solid\piggy-bank.svg" />
+    <Content Include="footawesome\svgs\solid\pills.svg" />
+    <Content Include="footawesome\svgs\solid\pizza-slice.svg" />
+    <Content Include="footawesome\svgs\solid\place-of-worship.svg" />
+    <Content Include="footawesome\svgs\solid\plane-arrival.svg" />
+    <Content Include="footawesome\svgs\solid\plane-departure.svg" />
+    <Content Include="footawesome\svgs\solid\plane-slash.svg" />
+    <Content Include="footawesome\svgs\solid\plane.svg" />
+    <Content Include="footawesome\svgs\solid\play-circle.svg" />
+    <Content Include="footawesome\svgs\solid\play.svg" />
+    <Content Include="footawesome\svgs\solid\plug.svg" />
+    <Content Include="footawesome\svgs\solid\plus-circle.svg" />
+    <Content Include="footawesome\svgs\solid\plus-square.svg" />
+    <Content Include="footawesome\svgs\solid\plus.svg" />
+    <Content Include="footawesome\svgs\solid\podcast.svg" />
+    <Content Include="footawesome\svgs\solid\poll-h.svg" />
+    <Content Include="footawesome\svgs\solid\poll.svg" />
+    <Content Include="footawesome\svgs\solid\poo-storm.svg" />
+    <Content Include="footawesome\svgs\solid\poo.svg" />
+    <Content Include="footawesome\svgs\solid\poop.svg" />
+    <Content Include="footawesome\svgs\solid\portrait.svg" />
+    <Content Include="footawesome\svgs\solid\pound-sign.svg" />
+    <Content Include="footawesome\svgs\solid\power-off.svg" />
+    <Content Include="footawesome\svgs\solid\pray.svg" />
+    <Content Include="footawesome\svgs\solid\praying-hands.svg" />
+    <Content Include="footawesome\svgs\solid\prescription-bottle-alt.svg" />
+    <Content Include="footawesome\svgs\solid\prescription-bottle.svg" />
+    <Content Include="footawesome\svgs\solid\prescription.svg" />
+    <Content Include="footawesome\svgs\solid\print.svg" />
+    <Content Include="footawesome\svgs\solid\procedures.svg" />
+    <Content Include="footawesome\svgs\solid\project-diagram.svg" />
+    <Content Include="footawesome\svgs\solid\pump-medical.svg" />
+    <Content Include="footawesome\svgs\solid\pump-soap.svg" />
+    <Content Include="footawesome\svgs\solid\puzzle-piece.svg" />
+    <Content Include="footawesome\svgs\solid\qrcode.svg" />
+    <Content Include="footawesome\svgs\solid\question-circle.svg" />
+    <Content Include="footawesome\svgs\solid\question.svg" />
+    <Content Include="footawesome\svgs\solid\quidditch.svg" />
+    <Content Include="footawesome\svgs\solid\quote-left.svg" />
+    <Content Include="footawesome\svgs\solid\quote-right.svg" />
+    <Content Include="footawesome\svgs\solid\quran.svg" />
+    <Content Include="footawesome\svgs\solid\radiation-alt.svg" />
+    <Content Include="footawesome\svgs\solid\radiation.svg" />
+    <Content Include="footawesome\svgs\solid\rainbow.svg" />
+    <Content Include="footawesome\svgs\solid\random.svg" />
+    <Content Include="footawesome\svgs\solid\receipt.svg" />
+    <Content Include="footawesome\svgs\solid\record-vinyl.svg" />
+    <Content Include="footawesome\svgs\solid\recycle.svg" />
+    <Content Include="footawesome\svgs\solid\redo-alt.svg" />
+    <Content Include="footawesome\svgs\solid\redo.svg" />
+    <Content Include="footawesome\svgs\solid\registered.svg" />
+    <Content Include="footawesome\svgs\solid\remove-format.svg" />
+    <Content Include="footawesome\svgs\solid\reply-all.svg" />
+    <Content Include="footawesome\svgs\solid\reply.svg" />
+    <Content Include="footawesome\svgs\solid\republican.svg" />
+    <Content Include="footawesome\svgs\solid\restroom.svg" />
+    <Content Include="footawesome\svgs\solid\retweet.svg" />
+    <Content Include="footawesome\svgs\solid\ribbon.svg" />
+    <Content Include="footawesome\svgs\solid\ring.svg" />
+    <Content Include="footawesome\svgs\solid\road.svg" />
+    <Content Include="footawesome\svgs\solid\robot.svg" />
+    <Content Include="footawesome\svgs\solid\rocket.svg" />
+    <Content Include="footawesome\svgs\solid\route.svg" />
+    <Content Include="footawesome\svgs\solid\rss-square.svg" />
+    <Content Include="footawesome\svgs\solid\rss.svg" />
+    <Content Include="footawesome\svgs\solid\ruble-sign.svg" />
+    <Content Include="footawesome\svgs\solid\ruler-combined.svg" />
+    <Content Include="footawesome\svgs\solid\ruler-horizontal.svg" />
+    <Content Include="footawesome\svgs\solid\ruler-vertical.svg" />
+    <Content Include="footawesome\svgs\solid\ruler.svg" />
+    <Content Include="footawesome\svgs\solid\running.svg" />
+    <Content Include="footawesome\svgs\solid\rupee-sign.svg" />
+    <Content Include="footawesome\svgs\solid\sad-cry.svg" />
+    <Content Include="footawesome\svgs\solid\sad-tear.svg" />
+    <Content Include="footawesome\svgs\solid\satellite-dish.svg" />
+    <Content Include="footawesome\svgs\solid\satellite.svg" />
+    <Content Include="footawesome\svgs\solid\save.svg" />
+    <Content Include="footawesome\svgs\solid\school.svg" />
+    <Content Include="footawesome\svgs\solid\screwdriver.svg" />
+    <Content Include="footawesome\svgs\solid\scroll.svg" />
+    <Content Include="footawesome\svgs\solid\sd-card.svg" />
+    <Content Include="footawesome\svgs\solid\search-dollar.svg" />
+    <Content Include="footawesome\svgs\solid\search-location.svg" />
+    <Content Include="footawesome\svgs\solid\search-minus.svg" />
+    <Content Include="footawesome\svgs\solid\search-plus.svg" />
+    <Content Include="footawesome\svgs\solid\search.svg" />
+    <Content Include="footawesome\svgs\solid\seedling.svg" />
+    <Content Include="footawesome\svgs\solid\server.svg" />
+    <Content Include="footawesome\svgs\solid\shapes.svg" />
+    <Content Include="footawesome\svgs\solid\share-alt-square.svg" />
+    <Content Include="footawesome\svgs\solid\share-alt.svg" />
+    <Content Include="footawesome\svgs\solid\share-square.svg" />
+    <Content Include="footawesome\svgs\solid\share.svg" />
+    <Content Include="footawesome\svgs\solid\shekel-sign.svg" />
+    <Content Include="footawesome\svgs\solid\shield-alt.svg" />
+    <Content Include="footawesome\svgs\solid\shield-virus.svg" />
+    <Content Include="footawesome\svgs\solid\ship.svg" />
+    <Content Include="footawesome\svgs\solid\shipping-fast.svg" />
+    <Content Include="footawesome\svgs\solid\shoe-prints.svg" />
+    <Content Include="footawesome\svgs\solid\shopping-bag.svg" />
+    <Content Include="footawesome\svgs\solid\shopping-basket.svg" />
+    <Content Include="footawesome\svgs\solid\shopping-cart.svg" />
+    <Content Include="footawesome\svgs\solid\shower.svg" />
+    <Content Include="footawesome\svgs\solid\shuttle-van.svg" />
+    <Content Include="footawesome\svgs\solid\sign-in-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sign-language.svg" />
+    <Content Include="footawesome\svgs\solid\sign-out-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sign.svg" />
+    <Content Include="footawesome\svgs\solid\signal.svg" />
+    <Content Include="footawesome\svgs\solid\signature.svg" />
+    <Content Include="footawesome\svgs\solid\sim-card.svg" />
+    <Content Include="footawesome\svgs\solid\sink.svg" />
+    <Content Include="footawesome\svgs\solid\sitemap.svg" />
+    <Content Include="footawesome\svgs\solid\skating.svg" />
+    <Content Include="footawesome\svgs\solid\skiing-nordic.svg" />
+    <Content Include="footawesome\svgs\solid\skiing.svg" />
+    <Content Include="footawesome\svgs\solid\skull-crossbones.svg" />
+    <Content Include="footawesome\svgs\solid\skull.svg" />
+    <Content Include="footawesome\svgs\solid\slash.svg" />
+    <Content Include="footawesome\svgs\solid\sleigh.svg" />
+    <Content Include="footawesome\svgs\solid\sliders-h.svg" />
+    <Content Include="footawesome\svgs\solid\smile-beam.svg" />
+    <Content Include="footawesome\svgs\solid\smile-wink.svg" />
+    <Content Include="footawesome\svgs\solid\smile.svg" />
+    <Content Include="footawesome\svgs\solid\smog.svg" />
+    <Content Include="footawesome\svgs\solid\smoking-ban.svg" />
+    <Content Include="footawesome\svgs\solid\smoking.svg" />
+    <Content Include="footawesome\svgs\solid\sms.svg" />
+    <Content Include="footawesome\svgs\solid\snowboarding.svg" />
+    <Content Include="footawesome\svgs\solid\snowflake.svg" />
+    <Content Include="footawesome\svgs\solid\snowman.svg" />
+    <Content Include="footawesome\svgs\solid\snowplow.svg" />
+    <Content Include="footawesome\svgs\solid\soap.svg" />
+    <Content Include="footawesome\svgs\solid\socks.svg" />
+    <Content Include="footawesome\svgs\solid\solar-panel.svg" />
+    <Content Include="footawesome\svgs\solid\sort-alpha-down-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-alpha-down.svg" />
+    <Content Include="footawesome\svgs\solid\sort-alpha-up-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-alpha-up.svg" />
+    <Content Include="footawesome\svgs\solid\sort-amount-down-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-amount-down.svg" />
+    <Content Include="footawesome\svgs\solid\sort-amount-up-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-amount-up.svg" />
+    <Content Include="footawesome\svgs\solid\sort-down.svg" />
+    <Content Include="footawesome\svgs\solid\sort-numeric-down-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-numeric-down.svg" />
+    <Content Include="footawesome\svgs\solid\sort-numeric-up-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sort-numeric-up.svg" />
+    <Content Include="footawesome\svgs\solid\sort-up.svg" />
+    <Content Include="footawesome\svgs\solid\sort.svg" />
+    <Content Include="footawesome\svgs\solid\spa.svg" />
+    <Content Include="footawesome\svgs\solid\space-shuttle.svg" />
+    <Content Include="footawesome\svgs\solid\spell-check.svg" />
+    <Content Include="footawesome\svgs\solid\spider.svg" />
+    <Content Include="footawesome\svgs\solid\spinner.svg" />
+    <Content Include="footawesome\svgs\solid\splotch.svg" />
+    <Content Include="footawesome\svgs\solid\spray-can.svg" />
+    <Content Include="footawesome\svgs\solid\square-full.svg" />
+    <Content Include="footawesome\svgs\solid\square-root-alt.svg" />
+    <Content Include="footawesome\svgs\solid\square.svg" />
+    <Content Include="footawesome\svgs\solid\stamp.svg" />
+    <Content Include="footawesome\svgs\solid\star-and-crescent.svg" />
+    <Content Include="footawesome\svgs\solid\star-half-alt.svg" />
+    <Content Include="footawesome\svgs\solid\star-half.svg" />
+    <Content Include="footawesome\svgs\solid\star-of-david.svg" />
+    <Content Include="footawesome\svgs\solid\star-of-life.svg" />
+    <Content Include="footawesome\svgs\solid\star.svg" />
+    <Content Include="footawesome\svgs\solid\step-backward.svg" />
+    <Content Include="footawesome\svgs\solid\step-forward.svg" />
+    <Content Include="footawesome\svgs\solid\stethoscope.svg" />
+    <Content Include="footawesome\svgs\solid\sticky-note.svg" />
+    <Content Include="footawesome\svgs\solid\stop-circle.svg" />
+    <Content Include="footawesome\svgs\solid\stop.svg" />
+    <Content Include="footawesome\svgs\solid\stopwatch-20.svg" />
+    <Content Include="footawesome\svgs\solid\stopwatch.svg" />
+    <Content Include="footawesome\svgs\solid\store-alt-slash.svg" />
+    <Content Include="footawesome\svgs\solid\store-alt.svg" />
+    <Content Include="footawesome\svgs\solid\store-slash.svg" />
+    <Content Include="footawesome\svgs\solid\store.svg" />
+    <Content Include="footawesome\svgs\solid\stream.svg" />
+    <Content Include="footawesome\svgs\solid\street-view.svg" />
+    <Content Include="footawesome\svgs\solid\strikethrough.svg" />
+    <Content Include="footawesome\svgs\solid\stroopwafel.svg" />
+    <Content Include="footawesome\svgs\solid\subscript.svg" />
+    <Content Include="footawesome\svgs\solid\subway.svg" />
+    <Content Include="footawesome\svgs\solid\suitcase-rolling.svg" />
+    <Content Include="footawesome\svgs\solid\suitcase.svg" />
+    <Content Include="footawesome\svgs\solid\sun.svg" />
+    <Content Include="footawesome\svgs\solid\superscript.svg" />
+    <Content Include="footawesome\svgs\solid\surprise.svg" />
+    <Content Include="footawesome\svgs\solid\swatchbook.svg" />
+    <Content Include="footawesome\svgs\solid\swimmer.svg" />
+    <Content Include="footawesome\svgs\solid\swimming-pool.svg" />
+    <Content Include="footawesome\svgs\solid\synagogue.svg" />
+    <Content Include="footawesome\svgs\solid\sync-alt.svg" />
+    <Content Include="footawesome\svgs\solid\sync.svg" />
+    <Content Include="footawesome\svgs\solid\syringe.svg" />
+    <Content Include="footawesome\svgs\solid\table-tennis.svg" />
+    <Content Include="footawesome\svgs\solid\table.svg" />
+    <Content Include="footawesome\svgs\solid\tablet-alt.svg" />
+    <Content Include="footawesome\svgs\solid\tablet.svg" />
+    <Content Include="footawesome\svgs\solid\tablets.svg" />
+    <Content Include="footawesome\svgs\solid\tachometer-alt.svg" />
+    <Content Include="footawesome\svgs\solid\tag.svg" />
+    <Content Include="footawesome\svgs\solid\tags.svg" />
+    <Content Include="footawesome\svgs\solid\tape.svg" />
+    <Content Include="footawesome\svgs\solid\tasks.svg" />
+    <Content Include="footawesome\svgs\solid\taxi.svg" />
+    <Content Include="footawesome\svgs\solid\teeth-open.svg" />
+    <Content Include="footawesome\svgs\solid\teeth.svg" />
+    <Content Include="footawesome\svgs\solid\temperature-high.svg" />
+    <Content Include="footawesome\svgs\solid\temperature-low.svg" />
+    <Content Include="footawesome\svgs\solid\tenge.svg" />
+    <Content Include="footawesome\svgs\solid\terminal.svg" />
+    <Content Include="footawesome\svgs\solid\text-height.svg" />
+    <Content Include="footawesome\svgs\solid\text-width.svg" />
+    <Content Include="footawesome\svgs\solid\th-large.svg" />
+    <Content Include="footawesome\svgs\solid\th-list.svg" />
+    <Content Include="footawesome\svgs\solid\th.svg" />
+    <Content Include="footawesome\svgs\solid\theater-masks.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer-empty.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer-full.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer-half.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer-quarter.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer-three-quarters.svg" />
+    <Content Include="footawesome\svgs\solid\thermometer.svg" />
+    <Content Include="footawesome\svgs\solid\thumbs-down.svg" />
+    <Content Include="footawesome\svgs\solid\thumbs-up.svg" />
+    <Content Include="footawesome\svgs\solid\thumbtack.svg" />
+    <Content Include="footawesome\svgs\solid\ticket-alt.svg" />
+    <Content Include="footawesome\svgs\solid\times-circle.svg" />
+    <Content Include="footawesome\svgs\solid\times.svg" />
+    <Content Include="footawesome\svgs\solid\tint-slash.svg" />
+    <Content Include="footawesome\svgs\solid\tint.svg" />
+    <Content Include="footawesome\svgs\solid\tired.svg" />
+    <Content Include="footawesome\svgs\solid\toggle-off.svg" />
+    <Content Include="footawesome\svgs\solid\toggle-on.svg" />
+    <Content Include="footawesome\svgs\solid\toilet-paper-slash.svg" />
+    <Content Include="footawesome\svgs\solid\toilet-paper.svg" />
+    <Content Include="footawesome\svgs\solid\toilet.svg" />
+    <Content Include="footawesome\svgs\solid\toolbox.svg" />
+    <Content Include="footawesome\svgs\solid\tools.svg" />
+    <Content Include="footawesome\svgs\solid\tooth.svg" />
+    <Content Include="footawesome\svgs\solid\torah.svg" />
+    <Content Include="footawesome\svgs\solid\torii-gate.svg" />
+    <Content Include="footawesome\svgs\solid\tractor.svg" />
+    <Content Include="footawesome\svgs\solid\trademark.svg" />
+    <Content Include="footawesome\svgs\solid\traffic-light.svg" />
+    <Content Include="footawesome\svgs\solid\trailer.svg" />
+    <Content Include="footawesome\svgs\solid\train.svg" />
+    <Content Include="footawesome\svgs\solid\tram.svg" />
+    <Content Include="footawesome\svgs\solid\transgender-alt.svg" />
+    <Content Include="footawesome\svgs\solid\transgender.svg" />
+    <Content Include="footawesome\svgs\solid\trash-alt.svg" />
+    <Content Include="footawesome\svgs\solid\trash-restore-alt.svg" />
+    <Content Include="footawesome\svgs\solid\trash-restore.svg" />
+    <Content Include="footawesome\svgs\solid\trash.svg" />
+    <Content Include="footawesome\svgs\solid\tree.svg" />
+    <Content Include="footawesome\svgs\solid\trophy.svg" />
+    <Content Include="footawesome\svgs\solid\truck-loading.svg" />
+    <Content Include="footawesome\svgs\solid\truck-monster.svg" />
+    <Content Include="footawesome\svgs\solid\truck-moving.svg" />
+    <Content Include="footawesome\svgs\solid\truck-pickup.svg" />
+    <Content Include="footawesome\svgs\solid\truck.svg" />
+    <Content Include="footawesome\svgs\solid\tshirt.svg" />
+    <Content Include="footawesome\svgs\solid\tty.svg" />
+    <Content Include="footawesome\svgs\solid\tv.svg" />
+    <Content Include="footawesome\svgs\solid\umbrella-beach.svg" />
+    <Content Include="footawesome\svgs\solid\umbrella.svg" />
+    <Content Include="footawesome\svgs\solid\underline.svg" />
+    <Content Include="footawesome\svgs\solid\undo-alt.svg" />
+    <Content Include="footawesome\svgs\solid\undo.svg" />
+    <Content Include="footawesome\svgs\solid\universal-access.svg" />
+    <Content Include="footawesome\svgs\solid\university.svg" />
+    <Content Include="footawesome\svgs\solid\unlink.svg" />
+    <Content Include="footawesome\svgs\solid\unlock-alt.svg" />
+    <Content Include="footawesome\svgs\solid\unlock.svg" />
+    <Content Include="footawesome\svgs\solid\upload.svg" />
+    <Content Include="footawesome\svgs\solid\user-alt-slash.svg" />
+    <Content Include="footawesome\svgs\solid\user-alt.svg" />
+    <Content Include="footawesome\svgs\solid\user-astronaut.svg" />
+    <Content Include="footawesome\svgs\solid\user-check.svg" />
+    <Content Include="footawesome\svgs\solid\user-circle.svg" />
+    <Content Include="footawesome\svgs\solid\user-clock.svg" />
+    <Content Include="footawesome\svgs\solid\user-cog.svg" />
+    <Content Include="footawesome\svgs\solid\user-edit.svg" />
+    <Content Include="footawesome\svgs\solid\user-friends.svg" />
+    <Content Include="footawesome\svgs\solid\user-graduate.svg" />
+    <Content Include="footawesome\svgs\solid\user-injured.svg" />
+    <Content Include="footawesome\svgs\solid\user-lock.svg" />
+    <Content Include="footawesome\svgs\solid\user-md.svg" />
+    <Content Include="footawesome\svgs\solid\user-minus.svg" />
+    <Content Include="footawesome\svgs\solid\user-ninja.svg" />
+    <Content Include="footawesome\svgs\solid\user-nurse.svg" />
+    <Content Include="footawesome\svgs\solid\user-plus.svg" />
+    <Content Include="footawesome\svgs\solid\user-secret.svg" />
+    <Content Include="footawesome\svgs\solid\user-shield.svg" />
+    <Content Include="footawesome\svgs\solid\user-slash.svg" />
+    <Content Include="footawesome\svgs\solid\user-tag.svg" />
+    <Content Include="footawesome\svgs\solid\user-tie.svg" />
+    <Content Include="footawesome\svgs\solid\user-times.svg" />
+    <Content Include="footawesome\svgs\solid\user.svg" />
+    <Content Include="footawesome\svgs\solid\users-cog.svg" />
+    <Content Include="footawesome\svgs\solid\users-slash.svg" />
+    <Content Include="footawesome\svgs\solid\users.svg" />
+    <Content Include="footawesome\svgs\solid\utensil-spoon.svg" />
+    <Content Include="footawesome\svgs\solid\utensils.svg" />
+    <Content Include="footawesome\svgs\solid\vector-square.svg" />
+    <Content Include="footawesome\svgs\solid\venus-double.svg" />
+    <Content Include="footawesome\svgs\solid\venus-mars.svg" />
+    <Content Include="footawesome\svgs\solid\venus.svg" />
+    <Content Include="footawesome\svgs\solid\vial.svg" />
+    <Content Include="footawesome\svgs\solid\vials.svg" />
+    <Content Include="footawesome\svgs\solid\video-slash.svg" />
+    <Content Include="footawesome\svgs\solid\video.svg" />
+    <Content Include="footawesome\svgs\solid\vihara.svg" />
+    <Content Include="footawesome\svgs\solid\virus-slash.svg" />
+    <Content Include="footawesome\svgs\solid\virus.svg" />
+    <Content Include="footawesome\svgs\solid\viruses.svg" />
+    <Content Include="footawesome\svgs\solid\voicemail.svg" />
+    <Content Include="footawesome\svgs\solid\volleyball-ball.svg" />
+    <Content Include="footawesome\svgs\solid\volume-down.svg" />
+    <Content Include="footawesome\svgs\solid\volume-mute.svg" />
+    <Content Include="footawesome\svgs\solid\volume-off.svg" />
+    <Content Include="footawesome\svgs\solid\volume-up.svg" />
+    <Content Include="footawesome\svgs\solid\vote-yea.svg" />
+    <Content Include="footawesome\svgs\solid\vr-cardboard.svg" />
+    <Content Include="footawesome\svgs\solid\walking.svg" />
+    <Content Include="footawesome\svgs\solid\wallet.svg" />
+    <Content Include="footawesome\svgs\solid\warehouse.svg" />
+    <Content Include="footawesome\svgs\solid\water.svg" />
+    <Content Include="footawesome\svgs\solid\wave-square.svg" />
+    <Content Include="footawesome\svgs\solid\weight-hanging.svg" />
+    <Content Include="footawesome\svgs\solid\weight.svg" />
+    <Content Include="footawesome\svgs\solid\wheelchair.svg" />
+    <Content Include="footawesome\svgs\solid\wifi.svg" />
+    <Content Include="footawesome\svgs\solid\wind.svg" />
+    <Content Include="footawesome\svgs\solid\window-close.svg" />
+    <Content Include="footawesome\svgs\solid\window-maximize.svg" />
+    <Content Include="footawesome\svgs\solid\window-minimize.svg" />
+    <Content Include="footawesome\svgs\solid\window-restore.svg" />
+    <Content Include="footawesome\svgs\solid\wine-bottle.svg" />
+    <Content Include="footawesome\svgs\solid\wine-glass-alt.svg" />
+    <Content Include="footawesome\svgs\solid\wine-glass.svg" />
+    <Content Include="footawesome\svgs\solid\won-sign.svg" />
+    <Content Include="footawesome\svgs\solid\wrench.svg" />
+    <Content Include="footawesome\svgs\solid\x-ray.svg" />
+    <Content Include="footawesome\svgs\solid\yen-sign.svg" />
+    <Content Include="footawesome\svgs\solid\yin-yang.svg" />
+    <Content Include="footawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="footawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="footawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Homepage.aspx" />
+    <Content Include="images\1470806.jpg" />
+    <Content Include="images\admin.png" />
+    <Content Include="images\store.png" />
+    <Content Include="images\user.png" />
+    <Content Include="MedicalStoreDashboard.aspx" />
+    <Content Include="MedicalStoreMedicineInventory.aspx" />
+    <Content Include="MedicalStoreEditProfile.aspx" />
+    <Content Include="MedicalStoreRegistration.aspx" />
+    <Content Include="Memberlogin.aspx" />
+    <Content Include="MemberRegistration.aspx" />
+    <Content Include="SearchMedicine.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="UserSearchMedicine.aspx" />
+    <Content Include="UserSignUp.aspx" />
+    <Content Include="UserYourMedicine.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Adminlogin.aspx" />
+    <Content Include="UserEditProfile.aspx" />
+    <Content Include="MedicalStoreAddMedicine.aspx" />
+    <Content Include="MedicalStoreUpdateStock.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMedicalstoreList.aspx.cs">
+      <DependentUpon>AdminMedicalstoreList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMedicalstoreList.aspx.designer.cs">
+      <DependentUpon>AdminMedicalstoreList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMedicalStoreManagement.aspx.cs">
+      <DependentUpon>AdminMedicalStoreManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMedicalStoreManagement.aspx.designer.cs">
+      <DependentUpon>AdminMedicalStoreManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserList.aspx.cs">
+      <DependentUpon>AdminUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserList.aspx.designer.cs">
+      <DependentUpon>AdminUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMemberManagement.aspx.cs">
+      <DependentUpon>AdminMemberManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMemberManagement.aspx.designer.cs">
+      <DependentUpon>AdminMemberManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreDashboard.aspx.cs">
+      <DependentUpon>MedicalStoreDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreDashboard.aspx.designer.cs">
+      <DependentUpon>MedicalStoreDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreMedicineInventory.aspx.cs">
+      <DependentUpon>MedicalStoreMedicineInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreMedicineInventory.aspx.designer.cs">
+      <DependentUpon>MedicalStoreMedicineInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreEditProfile.aspx.cs">
+      <DependentUpon>MedicalStoreEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreEditProfile.aspx.designer.cs">
+      <DependentUpon>MedicalStoreEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreRegistration.aspx.cs">
+      <DependentUpon>MedicalStoreRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreRegistration.aspx.designer.cs">
+      <DependentUpon>MedicalStoreRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberRegistration.aspx.cs">
+      <DependentUpon>MemberRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberRegistration.aspx.designer.cs">
+      <DependentUpon>MemberRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchMedicine.aspx.cs">
+      <DependentUpon>SearchMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchMedicine.aspx.designer.cs">
+      <DependentUpon>SearchMedicine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Memberlogin.aspx.cs">
+      <DependentUpon>Memberlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Memberlogin.aspx.designer.cs">
+      <DependentUpon>Memberlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminlogin.aspx.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminlogin.aspx.designer.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSearchMedicine.aspx.cs">
+      <DependentUpon>UserSearchMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSearchMedicine.aspx.designer.cs">
+      <DependentUpon>UserSearchMedicine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSignUp.aspx.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserSignUp.aspx.designer.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEditProfile.aspx.cs">
+      <DependentUpon>UserEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEditProfile.aspx.designer.cs">
+      <DependentUpon>UserEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreAddMedicine.aspx.cs">
+      <DependentUpon>MedicalStoreAddMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreAddMedicine.aspx.designer.cs">
+      <DependentUpon>MedicalStoreAddMedicine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStoreUpdateStock.aspx.cs">
+      <DependentUpon>MedicalStoreUpdateStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalStoreUpdateStock.aspx.designer.cs">
+      <DependentUpon>MedicalStoreUpdateStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserYourMedicine.aspx.cs">
+      <DependentUpon>UserYourMedicine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserYourMedicine.aspx.designer.cs">
+      <DependentUpon>UserYourMedicine.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="footawesome\less\brands.less" />
+    <Content Include="footawesome\less\fontawesome.less" />
+    <Content Include="footawesome\less\regular.less" />
+    <Content Include="footawesome\less\solid.less" />
+    <Content Include="footawesome\less\v4-shims.less" />
+    <Content Include="footawesome\less\_animated.less" />
+    <Content Include="footawesome\less\_bordered-pulled.less" />
+    <Content Include="footawesome\less\_core.less" />
+    <Content Include="footawesome\less\_fixed-width.less" />
+    <Content Include="footawesome\less\_icons.less" />
+    <Content Include="footawesome\less\_larger.less" />
+    <Content Include="footawesome\less\_list.less" />
+    <Content Include="footawesome\less\_mixins.less" />
+    <Content Include="footawesome\less\_rotated-flipped.less" />
+    <Content Include="footawesome\less\_screen-reader.less" />
+    <Content Include="footawesome\less\_shims.less" />
+    <Content Include="footawesome\less\_stacked.less" />
+    <Content Include="footawesome\less\_variables.less" />
+    <Content Include="footawesome\metadata\categories.yml" />
+    <Content Include="footawesome\metadata\icons.json" />
+    <Content Include="footawesome\metadata\icons.yml" />
+    <Content Include="footawesome\metadata\shims.json" />
+    <Content Include="footawesome\metadata\shims.yml" />
+    <Content Include="footawesome\metadata\sponsors.yml" />
+    <Content Include="footawesome\scss\brands.scss" />
+    <Content Include="footawesome\scss\fontawesome.scss" />
+    <Content Include="footawesome\scss\regular.scss" />
+    <Content Include="footawesome\scss\solid.scss" />
+    <Content Include="footawesome\scss\v4-shims.scss" />
+    <Content Include="footawesome\scss\_animated.scss" />
+    <Content Include="footawesome\scss\_bordered-pulled.scss" />
+    <Content Include="footawesome\scss\_core.scss" />
+    <Content Include="footawesome\scss\_fixed-width.scss" />
+    <Content Include="footawesome\scss\_icons.scss" />
+    <Content Include="footawesome\scss\_larger.scss" />
+    <Content Include="footawesome\scss\_list.scss" />
+    <Content Include="footawesome\scss\_mixins.scss" />
+    <Content Include="footawesome\scss\_rotated-flipped.scss" />
+    <Content Include="footawesome\scss\_screen-reader.scss" />
+    <Content Include="footawesome\scss\_shims.scss" />
+    <Content Include="footawesome\scss\_stacked.scss" />
+    <Content Include="footawesome\scss\_variables.scss" />
+    <Content Include="footawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="footawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="footawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="footawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="footawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="footawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="footawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="footawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="footawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="footawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="footawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="footawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-brands-400d41d.eot" />
+    <Content Include="assets\fonts\fa-light-300.eot" />
+    <Content Include="assets\fonts\fa-light-300.ttf" />
+    <Content Include="assets\fonts\fa-light-300.woff" />
+    <Content Include="assets\fonts\fa-light-300.woff2" />
+    <Content Include="assets\fonts\fa-light-300d41d.eot" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-regular-400d41d.eot" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\fa-solid-900d41d.eot" />
+    <Content Include="assets\fonts\spacegrotesk-bold-webfont.woff" />
+    <Content Include="assets\fonts\spacegrotesk-bold-webfont.woff2" />
+    <Content Include="assets\fonts\spacegrotesk-light-webfont.woff" />
+    <Content Include="assets\fonts\spacegrotesk-light-webfont.woff2" />
+    <Content Include="assets\fonts\spacegrotesk-medium-webfont.woff" />
+    <Content Include="assets\fonts\spacegrotesk-medium-webfont.woff2" />
+    <Content Include="assets\fonts\spacegrotesk-regular-webfont.woff" />
+    <Content Include="assets\fonts\spacegrotesk-regular-webfont.woff2" />
+    <Content Include="assets\fonts\spacegrotesk-semibold-webfont.woff" />
+    <Content Include="assets\fonts\spacegrotesk-semibold-webfont.woff2" />
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58746</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44364/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
